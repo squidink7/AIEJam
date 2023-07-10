@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://btaya5d2btv4s"]
+[gd_scene load_steps=18 format=3 uid="uid://btaya5d2btv4s"]
 
 [ext_resource type="PackedScene" uid="uid://b71x3fh1g3fha" path="res://Scenes/Player/Player.tscn" id="1_d5lgh"]
 [ext_resource type="Texture2D" uid="uid://ctgg2aivir612" path="res://Assets/Textures/Ground/default.png" id="1_t0cri"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cow2jvq2bmsob" path="res://Scenes/Food/tomato.tscn" id="5_124ny"]
 [ext_resource type="PackedScene" uid="uid://c5lxxxiwry6xh" path="res://Scenes/Food/cheese.tscn" id="6_pwv4u"]
 [ext_resource type="PackedScene" uid="uid://02ahvnhyihxo" path="res://Scenes/Minion/Minion.tscn" id="7_sggdm"]
+[ext_resource type="PackedScene" uid="uid://d4ju23lyai7qc" path="res://Scenes/Food/bread.tscn" id="8_skiwr"]
+[ext_resource type="PackedScene" uid="uid://c8pv72xee28jl" path="res://Scenes/Food/killer food/potato.tscn" id="9_gk7wo"]
+[ext_resource type="PackedScene" uid="uid://bllo2wy2wpeq2" path="res://Scenes/Food/killer food/bluecheese.tscn" id="10_1uj2p"]
+[ext_resource type="PackedScene" uid="uid://c7lmqcr67siec" path="res://Scenes/Food/carrot.tscn" id="11_qgeye"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_da38l"]
 
@@ -75,3 +79,33 @@ navigation_polygon = SubResource("NavigationPolygon_v2tdj")
 [node name="Minion" parent="." node_paths=PackedStringArray("Parent") instance=ExtResource("7_sggdm")]
 position = Vector2(160, 200)
 Parent = NodePath("../Player")
+
+[node name="Node2D2" parent="." instance=ExtResource("8_skiwr")]
+position = Vector2(269, 249)
+
+[node name="Node2D3" parent="." instance=ExtResource("9_gk7wo")]
+position = Vector2(331, 180)
+
+[node name="Node2D4" parent="." instance=ExtResource("10_1uj2p")]
+position = Vector2(122, 318)
+
+[node name="Tomato" parent="." instance=ExtResource("5_124ny")]
+position = Vector2(164, 448)
+
+[node name="Node2D5" parent="." instance=ExtResource("10_1uj2p")]
+position = Vector2(282, 376)
+
+[node name="Node2D6" parent="." instance=ExtResource("8_skiwr")]
+position = Vector2(809, 687)
+
+[node name="Node2D7" parent="." instance=ExtResource("9_gk7wo")]
+position = Vector2(765, 81)
+
+[node name="Cheese" parent="." instance=ExtResource("6_pwv4u")]
+position = Vector2(191, 700)
+
+[node name="Node2D8" parent="." instance=ExtResource("11_qgeye")]
+position = Vector2(557, 541)
+
+[node name="Node2D9" parent="." instance=ExtResource("11_qgeye")]
+position = Vector2(580, 201)
