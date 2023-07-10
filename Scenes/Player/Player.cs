@@ -4,24 +4,41 @@ using System;
 public partial class Player : RigidBody2D
 {
 	[Export] int Speed = 300;
-	[Export] int Deceleration = 10;
 	[Export] int JumpHeight = 400;
+	[Export] AnimatedSprite2D? Sprite;
 
 	public override void _PhysicsProcess(double delta)
 	{
-		var input = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+		var input = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
 
-		var velocity = new Vector2();
+		var velocity = input * Speed;
 		
-		if (input != Vector2.Zero)
+		if (velocity.LengthSquared() >= 1)
 		{
-			velocity = input * Speed;
+			AnimateSprite(velocity.Normalized());
 		}
 		else
 		{
-			// velocity = velocity.MoveToward(Vector2.Zero, Speed / Deceleration);
+			Sprite?.Stop();
 		}
-		
+
 		ApplyCentralForce(velocity);
+	}
+
+	void AnimateSprite(Vector2 direction)
+	{
+		if (Sprite == null) return;
+
+		if (direction.X < 0)
+		{
+			Sprite.FlipH = false;
+			Sprite.Play("run");
+		}
+		else if (direction.X < 0)
+		{
+			Sprite.FlipH = true;
+			Sprite.Play("run");
+		}
+
 	}
 }

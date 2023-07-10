@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r0sljh82uwf1"
-path="res://.godot/imported/Untitled-Artwork-7.png-cac7f99525f5a25a97798507c933eaba.ctex"
+path="res://.godot/imported/Untitled-Artwork-7.png-b4eff58205c6ddcb7e56675b2aaa4cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://RatRunning/Untitled-Artwork-7.png"
-dest_files=["res://.godot/imported/Untitled-Artwork-7.png-cac7f99525f5a25a97798507c933eaba.ctex"]
+source_file="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-7.png"
+dest_files=["res://.godot/imported/Untitled-Artwork-7.png-b4eff58205c6ddcb7e56675b2aaa4cdb.ctex"]
 
 [params]
 
