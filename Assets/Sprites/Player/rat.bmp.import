@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5csw5s0s0iro"
-path="res://.godot/imported/zrsh1h67.bmp-2ce8d59a01c8166c0de89131c43f3201.ctex"
+path="res://.godot/imported/rat.bmp-6aeb13e1c9ff23696ce1ab9b3e260657.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://zrsh1h67.bmp"
-dest_files=["res://.godot/imported/zrsh1h67.bmp-2ce8d59a01c8166c0de89131c43f3201.ctex"]
+source_file="res://Assets/Sprites/Player/rat.bmp"
+dest_files=["res://.godot/imported/rat.bmp-6aeb13e1c9ff23696ce1ab9b3e260657.ctex"]
 
 [params]
 
