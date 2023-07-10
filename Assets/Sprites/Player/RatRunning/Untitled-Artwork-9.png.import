@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bby7xd78rp2to"
-path="res://.godot/imported/IMG_6537.PNG-a022a354b68dff0b5ce9291624e070f7.ctex"
+uid="uid://bw6u6ppcyg0p"
+path="res://.godot/imported/Untitled-Artwork-9.png-63b0869fdb8912fccaf179f126d4786d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/textures/ground/IMG_6537.PNG"
-dest_files=["res://.godot/imported/IMG_6537.PNG-a022a354b68dff0b5ce9291624e070f7.ctex"]
+source_file="res://RatRunning/Untitled-Artwork-9.png"
+dest_files=["res://.godot/imported/Untitled-Artwork-9.png-63b0869fdb8912fccaf179f126d4786d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpie5vmdl0vxd"
-path="res://.godot/imported/rat.bmp-6aeb13e1c9ff23696ce1ab9b3e260657.ctex"
+uid="uid://qx50poufkoho"
+path="res://.godot/imported/Untitled-Artwork-5.png-59785ddf67f6d5d57602c43fb968aca8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/rat.bmp"
-dest_files=["res://.godot/imported/rat.bmp-6aeb13e1c9ff23696ce1ab9b3e260657.ctex"]
+source_file="res://RatRunning/Untitled-Artwork-5.png"
+dest_files=["res://.godot/imported/Untitled-Artwork-5.png-59785ddf67f6d5d57602c43fb968aca8.ctex"]
 
 [params]
 
