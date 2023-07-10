@@ -140,19 +140,19 @@ metadata/_edit_group_ = true
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
 z_index = -1
-position = Vector2(-3.5, 2.5)
+position = Vector2(-8.5, 2.5)
 emitting = false
-amount = 64
+amount = 16
 process_material = SubResource("ParticleProcessMaterial_8o50y")
-lifetime = 10.0
+lifetime = 3.0
 
 [node name="StepParticles2" type="GPUParticles2D" parent="Sprite"]
 z_index = -1
-position = Vector2(3, 2.5)
+position = Vector2(-2, 2.5)
 emitting = false
-amount = 64
+amount = 16
 process_material = SubResource("ParticleProcessMaterial_8o50y")
-lifetime = 10.0
+lifetime = 3.0
 
 [node name="HealthParticles" type="GPUParticles2D" parent="Sprite"]
 emitting = false

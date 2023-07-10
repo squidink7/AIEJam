@@ -78,6 +78,14 @@ public partial class Player : RigidBody2D
 		State = PlayerState.Normal;
 	}
 
+	async void OnPoisenEaten()
+	{
+		State = PlayerState.Eating;
+		Sprite?.Play("dead");
+		await ToSignal(Sprite, "animation_finished");
+		GetTree().Quit();
+	}
+
     public override void _Input(InputEvent ev)
     {
 		if (ev.IsActionPressed("Quit"))
@@ -90,5 +98,6 @@ public partial class Player : RigidBody2D
 enum PlayerState
 {
 	Normal,
-	Eating
+	Eating,
+	Dead
 }

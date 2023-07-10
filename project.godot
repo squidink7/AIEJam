@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="AIEJam"
+config/name="Rats Together Strong"
+config/description="A game about rats"
 run/main_scene="res://Scenes/Game/Game.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 boot_splash/bg_color=Color(1, 1, 1, 1)
