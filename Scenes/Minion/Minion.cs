@@ -11,8 +11,14 @@ public partial class Minion : RigidBody2D
 	[Export] GpuParticles2D? Particles2;
 	[Export] NavigationAgent2D? Navigator;
 	[Export] public Player? Parent;
+	string furColour;
 
 	PlayerState State;
+	
+	public override void _Ready()
+	{
+		furColour = (Random.Shared.Next()%3).ToString();
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -51,12 +57,12 @@ public partial class Minion : RigidBody2D
 		if (direction.X < 0)
 		{
 			SetSpriteFlip(false);
-			Sprite.Play("run");
+			Sprite.Play("Run" + furColour);
 		}
 		else if (direction.X > 0)
 		{
 			SetSpriteFlip(true);
-			Sprite.Play("run");
+			Sprite.Play("Run" + furColour);
 		}
 	}
 
@@ -87,11 +93,11 @@ public partial class Minion : RigidBody2D
 		Navigator.TargetPosition = Parent?.GlobalPosition ?? Vector2.Zero;
 	}
 
-    public override void _Input(InputEvent ev)
-    {
+	public override void _Input(InputEvent ev)
+	{
 		if (ev.IsActionPressed("Quit"))
 		{
 			GetTree().Quit();
 		}
-    }
+	}
 }
