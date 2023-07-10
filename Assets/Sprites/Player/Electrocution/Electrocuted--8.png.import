@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqyjbvkmf5fma"
-path="res://.godot/imported/chomp4.png-d10d8d0eb2ab2fe357081cf51ff41753.ctex"
+uid="uid://b2h0g0tdgvr8h"
+path="res://.godot/imported/Electrocuted--8.png-423f3521b71c2aa1d271c67bc2d852df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Chomp/chomp4.png"
-dest_files=["res://.godot/imported/chomp4.png-d10d8d0eb2ab2fe357081cf51ff41753.ctex"]
+source_file="res://Assets/Sprites/Player/Electrocution/Electrocuted--8.png"
+dest_files=["res://.godot/imported/Electrocuted--8.png-423f3521b71c2aa1d271c67bc2d852df.ctex"]
 
 [params]
 

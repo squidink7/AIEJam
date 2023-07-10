@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c25yb0c28hrcf"
-path="res://.godot/imported/IMG_6544.PNG-f74d5d46823c9ee1bfcd09fdb0b5724e.ctex"
+uid="uid://bcco0pkxu56ut"
+path="res://.godot/imported/Electrocuted--1.png-8c10d38ed341979bf561017948d2fa3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Ground/food/IMG_6544.PNG"
-dest_files=["res://.godot/imported/IMG_6544.PNG-f74d5d46823c9ee1bfcd09fdb0b5724e.ctex"]
+source_file="res://Assets/Sprites/Player/Electrocution/Electrocuted--1.png"
+dest_files=["res://.godot/imported/Electrocuted--1.png-8c10d38ed341979bf561017948d2fa3f.ctex"]
 
 [params]
 

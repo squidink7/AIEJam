@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqyjbvkmf5fma"
-path="res://.godot/imported/chomp4.png-d10d8d0eb2ab2fe357081cf51ff41753.ctex"
+uid="uid://c2aab6l545nv0"
+path="res://.godot/imported/Death-4.png-3a49b358564fe6a8c3b15153b10dec5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Chomp/chomp4.png"
-dest_files=["res://.godot/imported/chomp4.png-d10d8d0eb2ab2fe357081cf51ff41753.ctex"]
+source_file="res://Assets/Sprites/Player/Death/Death-4.png"
+dest_files=["res://.godot/imported/Death-4.png-3a49b358564fe6a8c3b15153b10dec5a.ctex"]
 
 [params]
 
