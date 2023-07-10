@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7lmqcr67siec"]
+[gd_scene load_steps=4 format=3 uid="uid://c7lmqcr67siec"]
 
+[ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_0of70"]
 [ext_resource type="Texture2D" uid="uid://txd6hg1xhmmh" path="res://Assets/Textures/Food/IMG_6548.PNG" id="1_fbwk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7jlh"]
 size = Vector2(29, 8)
 
 [node name="Node2D" type="Area2D"]
+script = ExtResource("1_0of70")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_fbwk1")

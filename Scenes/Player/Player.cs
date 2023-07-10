@@ -10,8 +10,15 @@ public partial class Player : RigidBody2D
 	[Export] GpuParticles2D? Particles;
 	[Export] GpuParticles2D? Particles2;
 
+	PlayerState State;
 
 	public override void _PhysicsProcess(double delta)
+	{
+		if (State == PlayerState.Normal)
+			Move();
+	}
+
+	void Move()
 	{
 		var input = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
 
@@ -39,16 +46,44 @@ public partial class Player : RigidBody2D
 
 		if (direction.X < 0)
 		{
-			Sprite.FlipH = false;
-			Sprite.Offset = Vector2.Right * 5;
+			SetSpriteFlip(false);
 			Sprite.Play("run");
 		}
 		else if (direction.X > 0)
 		{
-			Sprite.FlipH = true;
-			Sprite.Offset = Vector2.Left * 5;
+			SetSpriteFlip(true);
 			Sprite.Play("run");
 		}
+	}
+
+	void SetSpriteFlip(bool flip)
+	{
+		if (Sprite == null) return;
+
+		if (flip)
+		{
+			Sprite.Scale = new Vector2(-2, 2);
+		}
+		else
+		{
+			Sprite.Scale = new Vector2(2, 2);
+		}
+	}
+
+	async void OnFoodEaten(int value)
+	{
+		State = PlayerState.Eating;
+		Sprite?.Play("chomp");
+		await ToSignal(Sprite, "animation_finished");
+		State = PlayerState.Normal;
+	}
+
+	async void OnPoisenEaten()
+	{
+		State = PlayerState.Eating;
+		Sprite?.Play("dead");
+		await ToSignal(Sprite, "animation_finished");
+		GetTree().Quit();
 	}
 
     public override void _Input(InputEvent ev)
@@ -58,4 +93,11 @@ public partial class Player : RigidBody2D
 			GetTree().Quit();
 		}
     }
+}
+
+enum PlayerState
+{
+	Normal,
+	Eating,
+	Dead
 }
