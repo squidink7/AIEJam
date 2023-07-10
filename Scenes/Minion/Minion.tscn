@@ -1,0 +1,181 @@
+[gd_scene load_steps=27 format=3 uid="uid://02ahvnhyihxo"]
+
+[ext_resource type="Script" path="res://Scenes/Minion/Minion.cs" id="1_bagwy"]
+[ext_resource type="Texture2D" uid="uid://cl17x2l1jmimw" path="res://Assets/Sprites/Player/Chomp/chomp1.png" id="2_a5cbi"]
+[ext_resource type="Texture2D" uid="uid://7d1v5uisvxeg" path="res://Assets/Sprites/Player/Chomp/chomp2.png" id="3_1xm7p"]
+[ext_resource type="Texture2D" uid="uid://b4g1jpy76bebu" path="res://Assets/Sprites/Player/Chomp/chomp3.png" id="4_ulp2t"]
+[ext_resource type="Texture2D" uid="uid://bq8l2bhluxfql" path="res://Assets/Sprites/Player/Chomp/chomp5.png" id="5_r1wn3"]
+[ext_resource type="Texture2D" uid="uid://cqyjbvkmf5fma" path="res://Assets/Sprites/Player/Chomp/chomp4.png" id="6_2y5lg"]
+[ext_resource type="Texture2D" uid="uid://xwbm0pko73qi" path="res://Assets/Sprites/Player/Chomp/chomp6.png" id="7_5o6sy"]
+[ext_resource type="Texture2D" uid="uid://55kwmpjxxbm1" path="res://Assets/Sprites/Player/Chomp/chomp7.png" id="8_ktn1x"]
+[ext_resource type="Texture2D" uid="uid://bd3vbmahu5psx" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-1.png" id="9_sh40s"]
+[ext_resource type="Texture2D" uid="uid://bswi2wiupljv1" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-2.png" id="10_4268h"]
+[ext_resource type="Texture2D" uid="uid://ba1c3kuu5mcxp" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-3.png" id="11_jixbh"]
+[ext_resource type="Texture2D" uid="uid://cfvc54tfatsp1" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-4.png" id="12_rvmbl"]
+[ext_resource type="Texture2D" uid="uid://qx50poufkoho" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-5.png" id="13_665wv"]
+[ext_resource type="Texture2D" uid="uid://1jsr47d6e2xs" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-6.png" id="14_821x3"]
+[ext_resource type="Texture2D" uid="uid://r0sljh82uwf1" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-7.png" id="15_crclp"]
+[ext_resource type="Texture2D" uid="uid://cpm1ta0e4qx0n" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-8.png" id="16_2jv3h"]
+[ext_resource type="Texture2D" uid="uid://bw6u6ppcyg0p" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-9.png" id="17_6keob"]
+[ext_resource type="Texture2D" uid="uid://chra37ypx6ruj" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-10.png" id="18_aodkc"]
+[ext_resource type="Texture2D" uid="uid://cqy0fkq44sg73" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-11.png" id="19_03jtt"]
+[ext_resource type="Texture2D" uid="uid://b73e8e4658rya" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-12.png" id="20_40co7"]
+[ext_resource type="Script" path="res://Scenes/Player/Mouth.cs" id="21_qa5a5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5cwg7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a5cbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1xm7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ulp2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r1wn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2y5lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5o6sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ktn1x")
+}],
+"loop": false,
+"name": &"chomp",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_sh40s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4268h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jixbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rvmbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_665wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_821x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_crclp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2jv3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6keob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_aodkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_03jtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_40co7")
+}],
+"loop": true,
+"name": &"run",
+"speed": 15.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_duqtb"]
+emission_shape = 3
+emission_box_extents = Vector3(0, 1, 0)
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5h863"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 15.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aog1q"]
+radius = 8.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q36w8"]
+radius = 8.0
+height = 64.0
+
+[node name="Minion" type="RigidBody2D" node_paths=PackedStringArray("Sprite", "Particles", "Particles2", "Navigator")]
+lock_rotation = true
+linear_damp = 5.0
+script = ExtResource("1_bagwy")
+Speed = 1000
+Sprite = NodePath("Sprite")
+Particles = NodePath("Sprite/StepParticles")
+Particles2 = NodePath("Sprite/StepParticles2")
+Navigator = NodePath("Navigation")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5cwg7")
+animation = &"run"
+metadata/_edit_group_ = true
+
+[node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
+z_index = -1
+position = Vector2(-3.5, 2.5)
+emitting = false
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_duqtb")
+lifetime = 10.0
+
+[node name="StepParticles2" type="GPUParticles2D" parent="Sprite"]
+z_index = -1
+position = Vector2(3, 2.5)
+emitting = false
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_duqtb")
+lifetime = 10.0
+
+[node name="HealthParticles" type="GPUParticles2D" parent="Sprite"]
+emitting = false
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_5h863")
+one_shot = true
+
+[node name="Mouth" type="Area2D" parent="Sprite"]
+position = Vector2(-12, 0)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("21_qa5a5")
+
+[node name="Collider" type="CollisionShape2D" parent="Sprite/Mouth"]
+shape = SubResource("CircleShape2D_aog1q")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_q36w8")
+
+[node name="Navigation" type="NavigationAgent2D" parent="."]
+path_desired_distance = 30.0
+target_desired_distance = 60.0
+
+[node name="LocateTimer" type="Timer" parent="Navigation"]
+autostart = true
+
+[connection signal="area_entered" from="Sprite/Mouth" to="Sprite/Mouth" method="OnEnter"]
+[connection signal="timeout" from="Navigation/LocateTimer" to="." method="FindParent"]

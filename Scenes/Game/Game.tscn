@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://btaya5d2btv4s"]
+[gd_scene load_steps=14 format=3 uid="uid://btaya5d2btv4s"]
 
 [ext_resource type="PackedScene" uid="uid://b71x3fh1g3fha" path="res://Scenes/Player/Player.tscn" id="1_d5lgh"]
 [ext_resource type="Texture2D" uid="uid://ctgg2aivir612" path="res://Assets/Textures/Ground/default.png" id="1_t0cri"]
 [ext_resource type="Texture2D" uid="uid://dewlel63ugwgw" path="res://Assets/Textures/Ground/green.PNG" id="2_q5hr6"]
 [ext_resource type="Texture2D" uid="uid://b5facjef23kv3" path="res://Assets/Textures/Ground/white.PNG" id="3_lvgl5"]
+[ext_resource type="PackedScene" uid="uid://cow2jvq2bmsob" path="res://Scenes/Food/tomato.tscn" id="5_124ny"]
+[ext_resource type="PackedScene" uid="uid://c5lxxxiwry6xh" path="res://Scenes/Food/cheese.tscn" id="6_pwv4u"]
+[ext_resource type="PackedScene" uid="uid://02ahvnhyihxo" path="res://Scenes/Minion/Minion.tscn" id="7_sggdm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_da38l"]
 
@@ -28,6 +31,11 @@ sources/1 = SubResource("TileSetAtlasSource_p0g6m")
 sources/3 = SubResource("TileSetAtlasSource_18b0k")
 sources/4 = SubResource("TileSetAtlasSource_05khh")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_v2tdj"]
+vertices = PackedVector2Array(0, 0, 1024, 0, 1024, 800, 0, 800)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 1024, 0, 1024, 800, 0, 800)])
+
 [node name="Game" type="Node2D"]
 
 [node name="Boundry" type="StaticBody2D" parent="."]
@@ -48,3 +56,22 @@ layer_0/tile_data = PackedInt32Array(0, 3, 0, 65537, 3, 0, 131074, 3, 0, 196611,
 
 [node name="Player" parent="." instance=ExtResource("1_d5lgh")]
 position = Vector2(208, 112)
+
+[node name="Area2D" parent="." instance=ExtResource("5_124ny")]
+position = Vector2(128, 104)
+
+[node name="Area2D2" parent="." instance=ExtResource("5_124ny")]
+position = Vector2(200, 152)
+
+[node name="Area2D3" parent="." instance=ExtResource("5_124ny")]
+position = Vector2(216, 64)
+
+[node name="Node2D" parent="." instance=ExtResource("6_pwv4u")]
+position = Vector2(264, 104)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_v2tdj")
+
+[node name="Minion" parent="." node_paths=PackedStringArray("Parent") instance=ExtResource("7_sggdm")]
+position = Vector2(160, 200)
+Parent = NodePath("../Player")
