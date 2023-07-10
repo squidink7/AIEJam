@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tpgpfjxype6p"
-path="res://.godot/imported/qnbqhg29.bmp-8cb60ccfaf8cb33768ae90449540bf91.ctex"
+uid="uid://cr1fgf60p2dau"
+path="res://.godot/imported/wireright.png-76954a25c82b743b37357ce479ab62d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/qnbqhg29.bmp"
-dest_files=["res://.godot/imported/qnbqhg29.bmp-8cb60ccfaf8cb33768ae90449540bf91.ctex"]
+source_file="res://Assets/Textures/Food/wireright.png"
+dest_files=["res://.godot/imported/wireright.png-76954a25c82b743b37357ce479ab62d3.ctex"]
 
 [params]
 

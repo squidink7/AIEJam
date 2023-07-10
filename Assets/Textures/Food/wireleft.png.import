@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8adc5e1pbkwk"
-path="res://.godot/imported/IMG_6544.PNG-c27c097778270e5ed73e30774f8aea75.ctex"
+uid="uid://cc2qmmnkaesje"
+path="res://.godot/imported/wireleft.png-dc379caa29df594f87174f04fa15df55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Food/IMG_6544.PNG"
-dest_files=["res://.godot/imported/IMG_6544.PNG-c27c097778270e5ed73e30774f8aea75.ctex"]
+source_file="res://Assets/Textures/Food/wireleft.png"
+dest_files=["res://.godot/imported/wireleft.png-dc379caa29df594f87174f04fa15df55.ctex"]
 
 [params]
 
