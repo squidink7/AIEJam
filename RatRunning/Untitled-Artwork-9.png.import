@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5csw5s0s0iro"
-path="res://.godot/imported/zrsh1h67.bmp-2ce8d59a01c8166c0de89131c43f3201.ctex"
+uid="uid://bw6u6ppcyg0p"
+path="res://.godot/imported/Untitled-Artwork-9.png-63b0869fdb8912fccaf179f126d4786d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://zrsh1h67.bmp"
-dest_files=["res://.godot/imported/zrsh1h67.bmp-2ce8d59a01c8166c0de89131c43f3201.ctex"]
+source_file="res://RatRunning/Untitled-Artwork-9.png"
+dest_files=["res://.godot/imported/Untitled-Artwork-9.png-63b0869fdb8912fccaf179f126d4786d.ctex"]
 
 [params]
 
