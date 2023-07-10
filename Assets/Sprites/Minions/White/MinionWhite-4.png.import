@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4g1jpy76bebu"
-path="res://.godot/imported/chomp3.png-a033bf5a4b8f55810d196b2ae17319f5.ctex"
+uid="uid://b825uqd61lh2c"
+path="res://.godot/imported/MinionWhite-4.png-3fd4f827921dbc4d2d3b71a9a34aad3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/cHOMP/chomp3.png"
-dest_files=["res://.godot/imported/chomp3.png-a033bf5a4b8f55810d196b2ae17319f5.ctex"]
+source_file="res://Assets/Sprites/Minions/White/MinionWhite-4.png"
+dest_files=["res://.godot/imported/MinionWhite-4.png-3fd4f827921dbc4d2d3b71a9a34aad3a.ctex"]
 
 [params]
 
