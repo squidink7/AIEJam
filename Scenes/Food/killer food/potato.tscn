@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://44j4gqpdxfnf"]
+
+[ext_resource type="Texture2D" uid="uid://bw1h13gc3aomj" path="res://Assets/Textures/Food/IMG_6549.PNG" id="1_vhyp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiykt"]
+size = Vector2(24, 15)
+
+[node name="Node2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vhyp5")
+region_enabled = true
+region_rect = Rect2(1.64596, 16.7247, 30.2881, 15.8025)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_hiykt")
