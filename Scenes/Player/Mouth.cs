@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 public partial class Mouth : Area2D
 {
 	[Signal] public delegate void FoodEatenEventHandler(int value);
-	[Signal] public delegate void PoisonEatenEventHandler(int pain);
+	[Signal] public delegate void PoisonEatenEventHandler();
 	
 	async void OnEnter(Area2D area)
 	{
@@ -14,7 +14,7 @@ public partial class Mouth : Area2D
 			if (!food.Poison)
 				EmitSignal("FoodEaten", food.Value);
 			else
-				EmitSignal("PoisonEaten", food.Value);
+				EmitSignal("PoisonEaten");
 			
 			food.SetDeferred("monitorable", false);
 			await Task.Delay(500);

@@ -78,7 +78,7 @@ public partial class Player : RigidBody2D
 		State = PlayerState.Normal;
 	}
 
-	async void OnPoisenEaten()
+	async void OnPoisonEaten()
 	{
 		State = PlayerState.Eating;
 		Sprite?.Play("dead");

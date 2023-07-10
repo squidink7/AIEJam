@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://02ahvnhyihxo"]
+[gd_scene load_steps=53 format=3 uid="uid://02ahvnhyihxo"]
 
 [ext_resource type="Script" path="res://Scenes/Minion/Minion.cs" id="1_bagwy"]
 [ext_resource type="Texture2D" uid="uid://cl17x2l1jmimw" path="res://Assets/Sprites/Player/cHOMP/chomp1.png" id="2_a5cbi"]
@@ -223,6 +223,16 @@ radius = 8.0
 radius = 8.0
 height = 64.0
 
+[sub_resource type="Gradient" id="Gradient_bk3vl"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_obm06"]
+gradient = SubResource("Gradient_bk3vl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
 [node name="Minion" type="RigidBody2D" node_paths=PackedStringArray("Sprite", "Particles", "Particles2", "Navigator")]
 lock_rotation = true
 linear_damp = 5.0
@@ -282,6 +292,12 @@ target_desired_distance = 60.0
 
 [node name="LocateTimer" type="Timer" parent="Navigation"]
 autostart = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(2.75, 2.75)
+energy = 0.3
+texture = SubResource("GradientTexture2D_obm06")
 
 [connection signal="area_entered" from="Sprite/Mouth" to="Sprite/Mouth" method="OnEnter"]
 [connection signal="timeout" from="Navigation/LocateTimer" to="." method="FindParent"]
