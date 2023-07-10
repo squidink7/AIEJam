@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Player : RigidBody2D
+public partial class Minion : RigidBody2D
 {
 	[Export] int Speed;
 	[Export] int JumpHeight = 400;
@@ -9,6 +9,8 @@ public partial class Player : RigidBody2D
 	[Export] AnimatedSprite2D? Sprite;
 	[Export] GpuParticles2D? Particles;
 	[Export] GpuParticles2D? Particles2;
+	[Export] NavigationAgent2D? Navigator;
+	[Export] public Player? Parent;
 
 	PlayerState State;
 
@@ -20,11 +22,12 @@ public partial class Player : RigidBody2D
 
 	void Move()
 	{
-		var input = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
+		// var input = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
+		if (Navigator == null) return;
 
-		var velocity = input * Speed;
+		var velocity = ToLocal(Navigator.GetNextPathPosition()).Normalized() * Speed;
 		
-		if (velocity.LengthSquared() >= 1)
+		if (velocity.LengthSquared() >= 1 && !Navigator.IsTargetReached())
 		{
 			AnimateSprite(velocity.Normalized());
 			if (Particles != null) Particles!.Emitting = true;
@@ -37,7 +40,8 @@ public partial class Player : RigidBody2D
 			if (Particles2 != null) Particles2!.Emitting = true;
 		}
 
-		ApplyCentralForce(velocity);
+		if (!Navigator.IsTargetReached())
+			ApplyCentralForce(velocity);
 	}
 
 	void AnimateSprite(Vector2 direction)
@@ -78,6 +82,11 @@ public partial class Player : RigidBody2D
 		State = PlayerState.Normal;
 	}
 
+	void FindParent()
+	{
+		Navigator.TargetPosition = Parent?.GlobalPosition ?? Vector2.Zero;
+	}
+
     public override void _Input(InputEvent ev)
     {
 		if (ev.IsActionPressed("Quit"))
@@ -85,10 +94,4 @@ public partial class Player : RigidBody2D
 			GetTree().Quit();
 		}
     }
-}
-
-enum PlayerState
-{
-	Normal,
-	Eating
 }
