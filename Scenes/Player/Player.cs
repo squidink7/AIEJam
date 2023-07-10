@@ -86,13 +86,13 @@ public partial class Player : RigidBody2D
 		GetTree().Quit();
 	}
 
-    public override void _Input(InputEvent ev)
-    {
+	public override void _Input(InputEvent ev)
+	{
 		if (ev.IsActionPressed("Quit"))
 		{
 			GetTree().Quit();
 		}
-    }
+	}
 }
 
 enum PlayerState
