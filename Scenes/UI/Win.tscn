@@ -1,0 +1,296 @@
+[gd_scene load_steps=5 format=3 uid="uid://gb2yxcjhv5fm"]
+
+[ext_resource type="Texture2D" uid="uid://c6ndif7kekno5" path="res://Assets/Resources/start menu/IMG_6575.PNG" id="1_e4dl5"]
+[ext_resource type="Texture2D" uid="uid://ctgg2aivir612" path="res://Assets/Textures/Ground/default.png" id="1_gpdwj"]
+[ext_resource type="Texture2D" uid="uid://k0mmyn3d6eq5" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork 3.png" id="2_oka5i"]
+[ext_resource type="Texture2D" uid="uid://dn3p38mhbbsei" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork 2.png" id="3_4opsp"]
+
+[node name="Lose" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="White" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_right = 1024.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_right = 896.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 768.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_right = 640.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_right = 512.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White7" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 256.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White8" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White9" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White10" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White11" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White12" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 512.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White13" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 128.0
+offset_right = 640.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White14" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White15" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 128.0
+offset_right = 896.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White16" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 128.0
+offset_right = 1024.0
+offset_bottom = 256.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White17" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 256.0
+offset_right = 1024.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White18" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 384.0
+offset_right = 1024.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White19" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 384.0
+offset_right = 896.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White20" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 256.0
+offset_right = 896.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White21" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White22" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 384.0
+offset_right = 768.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White23" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White24" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White25" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White26" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 384.0
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White27" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 384.0
+offset_right = 384.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White28" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White29" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White30" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 256.0
+offset_right = 128.0
+offset_bottom = 384.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White31" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 384.0
+offset_right = 128.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="White32" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 256.0
+offset_bottom = 512.0
+texture = ExtResource("1_gpdwj")
+
+[node name="Img6575" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 512.0
+texture = ExtResource("1_e4dl5")
+
+[node name="Untitled-artwork" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.40055
+offset_right = 124.0
+offset_bottom = 88.4006
+scale = Vector2(4.29375, 4.29375)
+texture = ExtResource("2_oka5i")
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 377.401
+offset_right = 441.0
+offset_bottom = 451.401
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="Retry" type="Button" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 377.401
+offset_right = 225.0
+offset_bottom = 451.401
+theme_override_font_sizes/font_size = 30
+text = "Retry"
+
+[node name="Untitled-artwork2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 160.0
+offset_right = 999.0
+offset_bottom = 480.0
+texture = ExtResource("3_4opsp")
