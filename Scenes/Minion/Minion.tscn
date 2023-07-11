@@ -647,6 +647,5 @@ scale = Vector2(2.75, 2.75)
 energy = 0.3
 texture = SubResource("GradientTexture2D_obm06")
 
-[connection signal="Eaten" from="Sprite/Mouth" to="." method="OnEaten"]
 [connection signal="area_entered" from="Sprite/Mouth" to="Sprite/Mouth" method="OnEnter"]
 [connection signal="timeout" from="Navigation/LocateTimer" to="." method="FindParent"]

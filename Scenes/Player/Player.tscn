@@ -255,5 +255,4 @@ ChildScene = ExtResource("33_v5jiy")
 
 [node name="Timer" type="Timer" parent="ChildSpawner"]
 
-[connection signal="Eaten" from="Sprite/Mouth" to="." method="OnEaten"]
 [connection signal="area_entered" from="Sprite/Mouth" to="Sprite/Mouth" method="OnEnter"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://btaya5d2btv4s"]
+[gd_scene load_steps=29 format=3 uid="uid://btaya5d2btv4s"]
 
 [ext_resource type="PackedScene" uid="uid://b71x3fh1g3fha" path="res://Scenes/Player/Player.tscn" id="1_d5lgh"]
 [ext_resource type="Texture2D" uid="uid://ctgg2aivir612" path="res://Assets/Textures/Ground/default.png" id="1_t0cri"]
-[ext_resource type="Texture2D" uid="uid://dg37sh1n1fr1t" path="res://Assets/Textures/Ground/IMG_6554.PNG" id="1_vy6lr"]
+[ext_resource type="Texture2D" uid="uid://dxgf0tr43y27b" path="res://Assets/Textures/Ground/IMG_6554.PNG" id="1_vy6lr"]
 [ext_resource type="Texture2D" uid="uid://71tpmh3xfvgv" path="res://Assets/Textures/Ground/floor_normal.png" id="2_lmljk"]
 [ext_resource type="Texture2D" uid="uid://dewlel63ugwgw" path="res://Assets/Textures/Ground/green.PNG" id="2_q5hr6"]
 [ext_resource type="Texture2D" uid="uid://b5facjef23kv3" path="res://Assets/Textures/Ground/white.PNG" id="3_lvgl5"]
@@ -14,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://bllo2wy2wpeq2" path="res://Scenes/Food/killer food/bluecheese.tscn" id="10_1uj2p"]
 [ext_resource type="PackedScene" uid="uid://c7lmqcr67siec" path="res://Scenes/Food/carrot.tscn" id="11_qgeye"]
 [ext_resource type="Script" path="res://Scenes/Game/FoodSpawner.cs" id="14_3cefu"]
+[ext_resource type="PackedScene" uid="uid://4t4778u7sh0n" path="res://Scenes/Food/RaspberryOrStrawbIdk.tscn" id="15_npga4"]
+[ext_resource type="PackedScene" uid="uid://0q85pq36fooy" path="res://Scenes/Food/Apple.tscn" id="16_gvfvf"]
+[ext_resource type="PackedScene" uid="uid://bpwh1wvnx4yuq" path="res://Scenes/Food/killer food/Chocolate.tscn" id="17_ebpop"]
+[ext_resource type="PackedScene" uid="uid://b36aesxcx7yib" path="res://Scenes/Food/killer food/Coffee.tscn" id="18_08l46"]
+[ext_resource type="PackedScene" uid="uid://dvf3gnkso1fbd" path="res://Scenes/Food/killer food/conductive food/Wires.tscn" id="19_3i2hx"]
 
 [sub_resource type="Environment" id="Environment_wyecq"]
 background_mode = 3
@@ -121,21 +126,25 @@ position = Vector2(269, 249)
 
 [node name="Node2D3" parent="Food" instance=ExtResource("9_gk7wo")]
 position = Vector2(331, 180)
+FoodType = 0
 
 [node name="Node2D4" parent="Food" instance=ExtResource("10_1uj2p")]
 position = Vector2(122, 318)
+FoodType = 0
 
 [node name="Tomato" parent="Food" instance=ExtResource("5_124ny")]
 position = Vector2(164, 448)
 
 [node name="Node2D5" parent="Food" instance=ExtResource("10_1uj2p")]
 position = Vector2(282, 376)
+FoodType = 0
 
 [node name="Node2D6" parent="Food" instance=ExtResource("8_skiwr")]
 position = Vector2(809, 687)
 
 [node name="Node2D7" parent="Food" instance=ExtResource("9_gk7wo")]
 position = Vector2(765, 81)
+FoodType = 0
 
 [node name="Cheese" parent="Food" instance=ExtResource("6_pwv4u")]
 position = Vector2(191, 700)
@@ -149,10 +158,9 @@ position = Vector2(580, 201)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.2
 
-[node name="FoodSpawner" type="Timer" parent="." node_paths=PackedStringArray("World")]
+[node name="FoodSpawner" type="Timer" parent="."]
 autostart = true
 script = ExtResource("14_3cefu")
-World = NodePath("../TileMap")
-FoodScenes = Array[PackedScene]([ExtResource("8_skiwr"), ExtResource("11_qgeye"), ExtResource("6_pwv4u"), ExtResource("5_124ny"), ExtResource("10_1uj2p"), ExtResource("9_gk7wo")])
+FoodScenes = Array[PackedScene]([ExtResource("8_skiwr"), ExtResource("11_qgeye"), ExtResource("6_pwv4u"), ExtResource("5_124ny"), ExtResource("10_1uj2p"), ExtResource("9_gk7wo"), ExtResource("15_npga4"), ExtResource("16_gvfvf"), ExtResource("17_ebpop"), ExtResource("18_08l46"), ExtResource("19_3i2hx")])
 
 [connection signal="timeout" from="FoodSpawner" to="FoodSpawner" method="SpawnFood"]

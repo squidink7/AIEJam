@@ -17,28 +17,28 @@ texture = ExtResource("1_e4dl5")
 
 [node name="Untitled-artwork" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 32.0
-offset_right = 116.0
-offset_bottom = 112.0
+offset_left = 24.0
+offset_top = 8.40055
+offset_right = 124.0
+offset_bottom = 88.4006
 scale = Vector2(4.29375, 4.29375)
 texture = ExtResource("2_oka5i")
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 254.0
-offset_top = 401.0
-offset_right = 433.0
-offset_bottom = 475.0
+offset_left = 262.0
+offset_top = 377.401
+offset_right = 441.0
+offset_bottom = 451.401
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [node name="Retry" type="Button" parent="."]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 401.0
-offset_right = 217.0
-offset_bottom = 475.0
+offset_left = 46.0
+offset_top = 377.401
+offset_right = 225.0
+offset_bottom = 451.401
 theme_override_font_sizes/font_size = 30
 text = "Retry"
 
