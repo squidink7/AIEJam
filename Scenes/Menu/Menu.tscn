@@ -8,7 +8,7 @@
 [ext_resource type="Shader" path="res://Assets/Shaders/pan.gdshader" id="2_vm74w"]
 [ext_resource type="Texture2D" uid="uid://brqltqwc7klq6" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6572 (2).PNG" id="3_wd30d"]
 [ext_resource type="Texture2D" uid="uid://b1oiyknk42hh5" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6574 (2).PNG" id="4_8hjwj"]
-[ext_resource type="Texture2D" uid="uid://cw5jqcu6s3uqc" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6573 (2).PNG" id="5_8duje"]
+[ext_resource type="Texture2D" uid="uid://rc60tfg87qja" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6573 (2).PNG" id="5_8duje"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ipt1e"]
 shader = ExtResource("2_vm74w")

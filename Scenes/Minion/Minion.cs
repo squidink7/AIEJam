@@ -11,7 +11,7 @@ public partial class Minion : RigidBody2D
 	[Export] GpuParticles2D? Particles2;
 	[Export] NavigationAgent2D? Navigator;
 	[Export] public Player? Parent;
-	string furColour;
+	string furColour = "";
 
 	PlayerState State;
 	
@@ -110,9 +110,12 @@ public partial class Minion : RigidBody2D
 
 	void FindParent()
 	{
+		if (Navigator == null) return;
+
 		var parentPosition = Parent?.GlobalPosition ?? Vector2.Zero;
 		var randomX = (Random.Shared.Next() % 200) - 200 / 2;
 		var randomY = (Random.Shared.Next() % 200) - 200 / 2;
+		
 		Navigator.TargetPosition = parentPosition + new Vector2(randomX, randomY);;
 	}
 }

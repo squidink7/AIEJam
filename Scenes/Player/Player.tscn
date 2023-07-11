@@ -229,7 +229,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 metadata/_snap_enabled = true
 
-[node name="Player" type="RigidBody2D" node_paths=PackedStringArray("Sprite", "Particles", "Particles2")]
+[node name="Player" type="RigidBody2D" node_paths=PackedStringArray("Sprite", "Particles", "Particles2", "UI")]
 collision_layer = 2
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_lym42")
@@ -240,9 +240,10 @@ Speed = 1000
 Sprite = NodePath("Sprite")
 Particles = NodePath("Sprite/StepParticles")
 Particles2 = NodePath("Sprite/StepParticles2")
+UI = NodePath("CanvasLayer/UI")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-z_index = 1
+z_index = 5
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_itegm")
