@@ -252,6 +252,7 @@ script = ExtResource("32_my6jg")
 ChildScene = ExtResource("33_v5jiy")
 
 [node name="Timer" type="Timer" parent="ChildSpawner"]
+wait_time = 1.25
 autostart = true
 
 [connection signal="Eaten" from="Sprite/Mouth" to="." method="OnEaten"]
