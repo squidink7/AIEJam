@@ -43,8 +43,8 @@ animator = NodePath("AnimationPlayer")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-offset_right = 576.0
-offset_bottom = 280.0
+offset_right = 544.0
+offset_bottom = 272.0
 texture = ExtResource("1_c2cjd")
 expand_mode = 1
 stretch_mode = 4

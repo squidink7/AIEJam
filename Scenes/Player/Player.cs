@@ -9,13 +9,20 @@ public partial class Player : RigidBody2D
 	[Export] AnimatedSprite2D? Sprite;
 	[Export] GpuParticles2D? Particles;
 	[Export] GpuParticles2D? Particles2;
+	[Export] UI? UI;
 
 	PlayerState State;
+	public double Energy = 100;
 
 	public override void _PhysicsProcess(double delta)
 	{
 		if (State == PlayerState.Normal)
 			Move();
+
+		Energy -= delta;
+		Energy = Math.Clamp(Energy, 0, 100);
+
+		if (Energy == 0) Die();
 	}
 
 	void Move()
@@ -47,13 +54,12 @@ public partial class Player : RigidBody2D
 		if (direction.X < 0)
 		{
 			SetSpriteFlip(false);
-			Sprite.Play("run");
 		}
 		else if (direction.X > 0)
 		{
 			SetSpriteFlip(true);
-			Sprite.Play("run");
 		}
+		Sprite.Play("run");
 	}
 
 	void SetSpriteFlip(bool flip)
@@ -70,17 +76,35 @@ public partial class Player : RigidBody2D
 		}
 	}
 
-	async void OnFoodEaten(int value)
+	async void OnEaten(int type)
 	{
-		State = PlayerState.Eating;
-		Sprite?.Play("chomp");
-		await ToSignal(Sprite, "animation_finished");
-		State = PlayerState.Normal;
+		var foodType = (FoodType)type;
+		if (foodType == FoodType.Normal)
+		{
+			State = PlayerState.Eating;
+			Sprite?.Play("chomp");
+			await ToSignal(Sprite, "animation_finished");
+			State = PlayerState.Normal;
+		}
+		else if (foodType == FoodType.Poison)
+		{
+			State = PlayerState.Dead;
+			Sprite?.Play("dead");
+			await ToSignal(Sprite, "animation_finished");
+			GetTree().Quit();
+		}
+		else if (foodType == FoodType.Conductive)
+		{
+			State = PlayerState.Dead;
+			Sprite?.Play("electrocuted");
+			await ToSignal(Sprite, "animation_finished");
+			GetTree().Quit();
+		}
 	}
 
-	async void OnPoisonEaten()
+	async void Die()
 	{
-		State = PlayerState.Eating;
+		State = PlayerState.Dead;
 		Sprite?.Play("dead");
 		await ToSignal(Sprite, "animation_finished");
 		GetTree().Quit();

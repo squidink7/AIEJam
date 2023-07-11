@@ -8,7 +8,7 @@ size = Vector2(28, 12)
 
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_hqxac")
-Poison = true
+FoodType = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_qxlm8")
