@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvf3gnkso1fbd"]
+[gd_scene load_steps=7 format=3 uid="uid://dvf3gnkso1fbd"]
 
+[ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_fi47o"]
 [ext_resource type="Texture2D" uid="uid://b6tp8ro13j7n5" path="res://Assets/Textures/Food/wireup.png" id="1_p5ngm"]
 [ext_resource type="Texture2D" uid="uid://cr1fgf60p2dau" path="res://Assets/Textures/Food/wireright.png" id="2_32ax2"]
 [ext_resource type="Texture2D" uid="uid://cc2qmmnkaesje" path="res://Assets/Textures/Food/wireleft.png" id="3_eaxqw"]
@@ -12,6 +13,8 @@ height = 28.0
 radius = 8.06226
 
 [node name="Wires" type="Area2D"]
+script = ExtResource("1_fi47o")
+FoodType = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(16, -32)

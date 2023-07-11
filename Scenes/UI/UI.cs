@@ -7,9 +7,9 @@ public partial class UI : Control
 	[Export] ProgressBar RatsBar;
 	[Export] Player Player;
 
-    public override void _Process(double delta)
-    {
-        EnergyBar.Value = Player.Energy;
-        RatsBar.Value = ChildSpawner.RatCount;
-    }
+	public override void _Process(double delta)
+	{
+		EnergyBar.Value = Player.Energy;
+		RatsBar.Value = ChildSpawner.RatCount;
+	}
 }

@@ -158,7 +158,7 @@ position = Vector2(580, 201)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.2
 
-[node name="FoodSpawner" type="Timer" parent="." node_paths=PackedStringArray("World")]
+[node name="FoodSpawner" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 script = ExtResource("14_3cefu")

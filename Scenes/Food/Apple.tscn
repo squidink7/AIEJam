@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://0q85pq36fooy"]
+[gd_scene load_steps=4 format=3 uid="uid://0q85pq36fooy"]
 
 [ext_resource type="Texture2D" uid="uid://bvdw5snxa4wi6" path="res://Assets/Textures/Food/Untitled-Artwork 1(1).png" id="1_ebt38"]
+[ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_lkshn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cm2xg"]
 radius = 16.0
 
 [node name="Apple" type="Area2D"]
+script = ExtResource("1_lkshn")
 
 [node name="Untitled-artwork1(1)" type="Sprite2D" parent="."]
 texture = ExtResource("1_ebt38")

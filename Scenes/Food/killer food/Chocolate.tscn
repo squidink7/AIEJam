@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpwh1wvnx4yuq"]
+[gd_scene load_steps=4 format=3 uid="uid://bpwh1wvnx4yuq"]
 
+[ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_4m6g6"]
 [ext_resource type="Texture2D" uid="uid://cn1rahs2lspbq" path="res://Assets/Textures/Food/chocolate.png" id="1_ctc1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0liaw"]
 size = Vector2(10, 17)
 
 [node name="Chocolate" type="Area2D"]
+script = ExtResource("1_4m6g6")
+FoodType = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -0.5)

@@ -21,28 +21,29 @@ texture = ExtResource("1_ik5g1")
 
 [node name="Untitled-artwork" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 8.40055
-offset_right = 132.0
-offset_bottom = 88.4005
+offset_left = 160.0
+offset_top = 4.94126
+offset_right = 260.0
+offset_bottom = 84.9413
 scale = Vector2(4.29375, 4.29375)
 texture = ExtResource("1_3v1ik")
 
 [node name="Untitled-artwork1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 528.0
-offset_top = 336.0
-offset_right = 672.0
-offset_bottom = 409.0
-rotation = -0.867451
+offset_left = 640.0
+offset_top = 496.541
+offset_right = 784.0
+offset_bottom = 569.541
+rotation = -1.57079
 scale = Vector2(3.55931, 3.55931)
 texture = ExtResource("2_6eqg2")
 
 [node name="retry" type="TextureButton" parent="."]
 layout_mode = 0
-offset_top = 336.0
-offset_right = 320.0
-offset_bottom = 480.0
+offset_left = 128.0
+offset_top = 332.541
+offset_right = 448.0
+offset_bottom = 476.541
 texture_normal = ExtResource("4_4mp40")
 texture_hover = ExtResource("5_cwnua")
 ignore_texture_size = true
@@ -50,10 +51,10 @@ stretch_mode = 5
 
 [node name="quit" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 374.0
-offset_right = 478.0
-offset_bottom = 466.0
+offset_left = 400.0
+offset_top = 370.541
+offset_right = 606.0
+offset_bottom = 462.541
 texture_normal = ExtResource("6_8uo3s")
 texture_hover = ExtResource("7_0iu6d")
 ignore_texture_size = true
