@@ -1,17 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxlm5m7ld2dge"]
+[gd_scene load_steps=7 format=3 uid="uid://c2q1alfdxvymv"]
 
 [ext_resource type="Texture2D" uid="uid://c8lvajijq77g4" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork.png" id="1_3v1ik"]
 [ext_resource type="Texture2D" uid="uid://c6ndif7kekno5" path="res://Assets/Resources/start menu/IMG_6575.PNG" id="1_ik5g1"]
+[ext_resource type="Script" path="res://Scenes/UI/Lose.cs" id="1_o1ith"]
 [ext_resource type="Texture2D" uid="uid://dsun5osir5lmp" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork 1.png" id="2_6eqg2"]
 [ext_resource type="Texture2D" uid="uid://rtvew8ivjmiw" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6581 - Copy (2).PNG" id="4_4mp40"]
 [ext_resource type="Texture2D" uid="uid://doxth6u6vfy57" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6580 - Copy (2).PNG" id="5_cwnua"]
-[ext_resource type="Texture2D" uid="uid://b1oiyknk42hh5" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6574 (2).PNG" id="6_8uo3s"]
-[ext_resource type="Texture2D" uid="uid://rc60tfg87qja" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6573 (3).PNG" id="7_0iu6d"]
 
 [node name="Lose2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_o1ith")
 
 [node name="Img6575" type="TextureRect" parent="."]
 layout_mode = 0
@@ -40,22 +40,13 @@ texture = ExtResource("2_6eqg2")
 
 [node name="retry" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 332.541
-offset_right = 448.0
-offset_bottom = 476.541
+offset_left = 192.0
+offset_top = 336.0
+offset_right = 512.0
+offset_bottom = 480.0
 texture_normal = ExtResource("4_4mp40")
 texture_hover = ExtResource("5_cwnua")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="quit" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 400.0
-offset_top = 370.541
-offset_right = 606.0
-offset_bottom = 462.541
-texture_normal = ExtResource("6_8uo3s")
-texture_hover = ExtResource("7_0iu6d")
-ignore_texture_size = true
-stretch_mode = 4
+[connection signal="pressed" from="retry" to="." method="RetryClicked"]

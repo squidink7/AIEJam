@@ -111,12 +111,4 @@ public partial class Minion : RigidBody2D
 		var randomY = (Random.Shared.Next() % 200) - 200 / 2;
 		Navigator.TargetPosition = parentPosition + new Vector2(randomX, randomY);;
 	}
-
-	public override void _Input(InputEvent ev)
-	{
-		if (ev.IsActionPressed("Quit"))
-		{
-			GetTree().Quit();
-		}
-	}
 }
