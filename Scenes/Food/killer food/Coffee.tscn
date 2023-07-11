@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=3 uid="uid://b36aesxcx7yib"]
+
+[ext_resource type="Texture2D" uid="uid://d3uu1idh8umxh" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-1.png" id="1_dps1k"]
+[ext_resource type="Texture2D" uid="uid://bn41f1iq8v34m" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-2.png" id="2_w8tpg"]
+[ext_resource type="Texture2D" uid="uid://bkiu7h2tanj7l" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-3.png" id="3_psr62"]
+[ext_resource type="Texture2D" uid="uid://d1uvudaoucjup" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-4.png" id="4_ux7l8"]
+[ext_resource type="Texture2D" uid="uid://dwnhtv40wlm52" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-5.png" id="5_f66x0"]
+[ext_resource type="Texture2D" uid="uid://pd5xq4p75rsp" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-6.png" id="6_tm5y0"]
+[ext_resource type="Texture2D" uid="uid://dcm75edqb26cm" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-7.png" id="7_ci86y"]
+[ext_resource type="Texture2D" uid="uid://bt64defbc1nt3" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-8.png" id="8_bex2e"]
+[ext_resource type="Texture2D" uid="uid://bgp1vunwxo4wr" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-9.png" id="9_4a5p6"]
+[ext_resource type="Texture2D" uid="uid://dnkdcupe3hxh0" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-10.png" id="10_f138y"]
+[ext_resource type="Texture2D" uid="uid://b6ggltqb5gm20" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-11.png" id="11_gd646"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifx02"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dps1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w8tpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_psr62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ux7l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f66x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tm5y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ci86y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bex2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4a5p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f138y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gd646")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fc3vi"]
+radius = 5.0
+height = 14.0
+
+[node name="Coffee" type="Area2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ifx02")
+frame_progress = 0.921881
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+rotation = 1.57169
+shape = SubResource("CapsuleShape2D_fc3vi")
