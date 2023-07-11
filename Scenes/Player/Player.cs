@@ -4,7 +4,7 @@ using System;
 public partial class Player : RigidBody2D
 {
 	[Export] int Speed;
-	[Export] int JumpHeight = 400;
+	[Export] int JumpHeight = 200;
 
 	[Export] AnimatedSprite2D? Sprite;
 	[Export] GpuParticles2D? Particles;
@@ -29,7 +29,7 @@ public partial class Player : RigidBody2D
 	{
 		var input = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
 
-		var velocity = input * Speed;
+		var velocity = input * (float)((Speed * (Energy / 100)) + 300);
 		
 		if (velocity.LengthSquared() >= 1)
 		{
@@ -95,7 +95,7 @@ public partial class Player : RigidBody2D
 			await ToSignal(Sprite, "animation_finished");
 			Sprite?.Play("dead");
 			await ToSignal(Sprite, "animation_finished");
-			GetTree().Quit();
+			GetTree().ChangeSceneToFile("res://Scenes/UI/Lose.tscn");
 		}
 		else if (foodType == FoodType.Conductive)
 		{
@@ -104,7 +104,7 @@ public partial class Player : RigidBody2D
 			await ToSignal(Sprite, "animation_finished");
 			Sprite?.Play("electrocuted");
 			await ToSignal(Sprite, "animation_finished");
-			GetTree().Quit();
+			GetTree().ChangeSceneToFile("res://Scenes/UI/Lose.tscn");
 		}
 	}
 
@@ -113,7 +113,7 @@ public partial class Player : RigidBody2D
 		State = PlayerState.Dead;
 		Sprite?.Play("dead");
 		await ToSignal(Sprite, "animation_finished");
-		GetTree().Quit();
+		GetTree().ChangeSceneToFile("res://Scenes/UI/Lose.tscn");
 	}
 
 	public override void _Input(InputEvent ev)
