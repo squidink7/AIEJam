@@ -154,12 +154,13 @@ position = Vector2(580, 201)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.2
 
-[node name="FoodSpawner" type="Timer" parent="." node_paths=PackedStringArray("World")]
-wait_time = 2.0
+[node name="FoodSpawner" type="Timer" parent="." node_paths=PackedStringArray("World", "Player")]
+wait_time = 0.8
 autostart = true
 script = ExtResource("14_3cefu")
 World = NodePath("../TileMap")
 FoodScenes = Array[PackedScene]([ExtResource("8_skiwr"), ExtResource("11_qgeye"), ExtResource("6_pwv4u"), ExtResource("5_124ny"), ExtResource("10_1uj2p"), ExtResource("9_gk7wo"), ExtResource("15_npga4"), ExtResource("16_gvfvf"), ExtResource("17_ebpop"), ExtResource("18_08l46"), ExtResource("19_3i2hx")])
+Player = NodePath("../Player")
 
 [node name="Wires" parent="." instance=ExtResource("19_3i2hx")]
 position = Vector2(548, 318)

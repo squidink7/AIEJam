@@ -645,7 +645,7 @@ autostart = true
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, -1.90735e-06)
 scale = Vector2(2.75, 2.75)
-energy = 0.3
+energy = 0.1
 texture = SubResource("GradientTexture2D_obm06")
 
 [connection signal="Eaten" from="Sprite/Mouth" to="." method="OnEaten"]

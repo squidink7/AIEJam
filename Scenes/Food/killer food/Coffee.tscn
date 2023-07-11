@@ -81,7 +81,6 @@ autoplay = "default"
 frame_progress = 0.0557561
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-1, 2)
 rotation = 1.57169
 shape = SubResource("CapsuleShape2D_fc3vi")

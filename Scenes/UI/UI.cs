@@ -10,6 +10,6 @@ public partial class UI : Control
 	public override void _Process(double delta)
 	{
 		EnergyBar.Value = Player.Energy;
-		RatsBar.Value = ChildSpawner.RatCount;
+		RatsBar.Value = (float)ChildSpawner.RatCount / (float)ChildSpawner.MaxRatCount * 100;
 	}
 }

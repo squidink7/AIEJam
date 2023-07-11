@@ -8,6 +8,7 @@ public partial class ChildSpawner : Node2D
 	[Export] int TargetEnergy = 80;
 
 	public static int RatCount = 0;
+	public static int MaxRatCount = 50;
 
     public override void _Ready()
     {
@@ -36,7 +37,7 @@ public partial class ChildSpawner : Node2D
 
 		RatCount++;
 		
-		if (RatCount >= 100)
+		if (RatCount >= MaxRatCount)
 		{
 			GetTree().ChangeSceneToFile("res://Scenes/UI/Win.tscn");
 		}
