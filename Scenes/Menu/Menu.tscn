@@ -1,13 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmmsy2s7abuyj"]
+[gd_scene load_steps=14 format=3 uid="uid://dmmsy2s7abuyj"]
 
 [ext_resource type="Texture2D" uid="uid://c6ndif7kekno5" path="res://Assets/Resources/start menu/IMG_6575.PNG" id="1_c2cjd"]
 [ext_resource type="Texture2D" uid="uid://drvdi5f6liwda" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6577 (2).PNG" id="1_ex3x0"]
 [ext_resource type="Script" path="res://Scenes/Menu/Menu.cs" id="1_r1oup"]
 [ext_resource type="Texture2D" uid="uid://bi7e7nytims4o" path="res://Assets/Resources/start menu/IMG_6568.PNG" id="1_xqhio"]
 [ext_resource type="Texture2D" uid="uid://2i25q35mtv4x" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6571 (2).PNG" id="2_pdxmh"]
+[ext_resource type="Shader" path="res://Assets/Shaders/pan.gdshader" id="2_vm74w"]
 [ext_resource type="Texture2D" uid="uid://brqltqwc7klq6" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6572 (2).PNG" id="3_wd30d"]
 [ext_resource type="Texture2D" uid="uid://b1oiyknk42hh5" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6574 (2).PNG" id="4_8hjwj"]
 [ext_resource type="Texture2D" uid="uid://cw5jqcu6s3uqc" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6573 (2).PNG" id="5_8duje"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ipt1e"]
+shader = ExtResource("2_vm74w")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_252x3"]
+diffuse_texture = ExtResource("1_c2cjd")
+texture_repeat = 2
 
 [sub_resource type="Animation" id="Animation_kqrvh"]
 resource_name = "bob"
@@ -41,10 +49,11 @@ offset_bottom = 512.0
 script = ExtResource("1_r1oup")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_ipt1e")
 layout_mode = 1
 offset_right = 544.0
 offset_bottom = 272.0
-texture = ExtResource("1_c2cjd")
+texture = SubResource("CanvasTexture_252x3")
 expand_mode = 1
 stretch_mode = 4
 

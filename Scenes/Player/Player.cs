@@ -19,7 +19,7 @@ public partial class Player : RigidBody2D
 		if (State == PlayerState.Normal)
 			Move();
 
-		Energy -= delta;
+		Energy -= delta * 2;
 		Energy = Math.Clamp(Energy, 0, 100);
 
 		if (Energy == 0) Die();
@@ -84,6 +84,7 @@ public partial class Player : RigidBody2D
 			State = PlayerState.Eating;
 			Sprite?.Play("chomp");
 			await ToSignal(Sprite, "animation_finished");
+			Energy += 10;
 			State = PlayerState.Normal;
 		}
 		else if (foodType == FoodType.Poison)

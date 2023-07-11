@@ -93,16 +93,14 @@ public partial class Minion : RigidBody2D
 		else if (foodType == FoodType.Poison)
 		{
 			State = PlayerState.Dead;
-			Sprite?.Play("Dead" + furColour);
-			await ToSignal(Sprite, "animation_finished");
-			GetTree().Quit();
+			Sprite?.Play("Death" + furColour);
+			ChildSpawner.RatCount--;
 		}
 		else if (foodType == FoodType.Conductive)
 		{
 			State = PlayerState.Dead;
 			Sprite?.Play("Electrocuted" + furColour);
-			await ToSignal(Sprite, "animation_finished");
-			GetTree().Quit();
+			ChildSpawner.RatCount--;
 		}
 	}
 

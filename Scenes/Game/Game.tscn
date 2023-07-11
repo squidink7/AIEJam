@@ -150,6 +150,7 @@ position = Vector2(580, 201)
 energy = 0.2
 
 [node name="FoodSpawner" type="Timer" parent="." node_paths=PackedStringArray("World")]
+wait_time = 2.0
 autostart = true
 script = ExtResource("14_3cefu")
 World = NodePath("../TileMap")

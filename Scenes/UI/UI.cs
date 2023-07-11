@@ -3,11 +3,13 @@ using System;
 
 public partial class UI : Control
 {
-	[Export] ProgressBar Bar;
+	[Export] ProgressBar EnergyBar;
+	[Export] ProgressBar RatsBar;
 	[Export] Player Player;
 
     public override void _Process(double delta)
     {
-        Bar.Value = Player.Energy;
+        EnergyBar.Value = Player.Energy;
+        RatsBar.Value = ChildSpawner.RatCount;
     }
 }

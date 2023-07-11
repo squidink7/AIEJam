@@ -7,14 +7,23 @@ public partial class ChildSpawner : Node2D
 	[Export] int MaxDistanceFromPlayer = 100;
 	[Export] int TargetEnergy = 80;
 
+	public static int RatCount = 0;
+
+    public override void _Ready()
+    {
+        RatCount = 0;
+    }
+
+    
+
 	void TimerTick()
 	{
 		var player = GetParent<Player>();
 		if (player.Energy >= 80)
-			SpawnChild(player.GlobalPosition);
+			SpawnChild(player);
 	}
 	
-	public void SpawnChild(Vector2 parentPosition)
+	public void SpawnChild(Player parent)
 	{
 		if (ChildScene == null) return;
 
@@ -24,6 +33,14 @@ public partial class ChildSpawner : Node2D
 		var newRat = ChildScene.Instantiate<Minion>();
 		GetNode("/root/Game").AddChild(newRat);
 
-		newRat.GlobalPosition = parentPosition + new Vector2(randomX, randomY);
+		newRat.GlobalPosition = parent.GlobalPosition + new Vector2(randomX, randomY);
+		newRat.Parent = parent;
+
+		RatCount++;
+		
+		if (RatCount >= 100)
+		{
+			GetTree().ChangeSceneToFile("res://Scenes/UI/Win.tscn");
+		}
 	}
 }
