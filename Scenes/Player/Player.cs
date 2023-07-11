@@ -91,6 +91,8 @@ public partial class Player : RigidBody2D
 		else if (foodType == FoodType.Poison)
 		{
 			State = PlayerState.Dead;
+			Sprite?.Play("chomp");
+			await ToSignal(Sprite, "animation_finished");
 			Sprite?.Play("dead");
 			await ToSignal(Sprite, "animation_finished");
 			GetTree().Quit();
@@ -98,6 +100,8 @@ public partial class Player : RigidBody2D
 		else if (foodType == FoodType.Conductive)
 		{
 			State = PlayerState.Dead;
+			Sprite?.Play("chomp");
+			await ToSignal(Sprite, "animation_finished");
 			Sprite?.Play("electrocuted");
 			await ToSignal(Sprite, "animation_finished");
 			GetTree().Quit();

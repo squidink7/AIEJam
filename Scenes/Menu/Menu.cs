@@ -10,16 +10,14 @@ public partial class Menu : Control
 		Animator.Play("bob");
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	void startclick ()
 	{
-	}
-void startclick (){
 		GetTree().ChangeSceneToFile("res://Scenes/Game/Game.tscn");
-		
 	}
-void quitclick (){
+
+	void quitclick ()
+	{
 		GetTree().Quit();
-		}
+	}
 }
 
