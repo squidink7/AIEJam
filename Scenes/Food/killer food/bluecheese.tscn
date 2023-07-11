@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bllo2wy2wpeq2"]
+[gd_scene load_steps=6 format=3 uid="uid://bllo2wy2wpeq2"]
 
 [ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_hqxac"]
 [ext_resource type="Texture2D" uid="uid://txd6hg1xhmmh" path="res://Assets/Textures/Food/IMG_6548.PNG" id="1_qxlm8"]
+
+[sub_resource type="Gradient" id="Gradient_fcv7k"]
+colors = PackedColorArray(0.560784, 0, 1, 1, 0.560784, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n5ukp"]
+gradient = SubResource("Gradient_fcv7k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duuai"]
 size = Vector2(28, 12)
@@ -9,6 +18,9 @@ size = Vector2(28, 12)
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_hqxac")
 FoodType = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = SubResource("GradientTexture2D_n5ukp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_qxlm8")

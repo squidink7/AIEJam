@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8pv72xee28jl"]
+[gd_scene load_steps=6 format=3 uid="uid://c8pv72xee28jl"]
 
 [ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_njw1n"]
 [ext_resource type="Texture2D" uid="uid://bw1h13gc3aomj" path="res://Assets/Textures/Food/IMG_6549.PNG" id="1_vhyp5"]
+
+[sub_resource type="Gradient" id="Gradient_67cly"]
+colors = PackedColorArray(0.560784, 0, 1, 1, 0.560784, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nf6k2"]
+gradient = SubResource("Gradient_67cly")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hiykt"]
 size = Vector2(24, 15)
@@ -10,11 +19,16 @@ size = Vector2(24, 15)
 script = ExtResource("1_njw1n")
 FoodType = 1
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
+texture = SubResource("GradientTexture2D_nf6k2")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vhyp5")
 region_enabled = true
 region_rect = Rect2(1.64596, 16.7247, 30.2881, 15.8025)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_hiykt")

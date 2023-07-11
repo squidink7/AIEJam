@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b36aesxcx7yib"]
+[gd_scene load_steps=17 format=3 uid="uid://b36aesxcx7yib"]
 
 [ext_resource type="Script" path="res://Scenes/Food/Food.cs" id="1_bk4et"]
 [ext_resource type="Texture2D" uid="uid://d3uu1idh8umxh" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-1.png" id="1_dps1k"]
@@ -12,6 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://bgp1vunwxo4wr" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-9.png" id="9_4a5p6"]
 [ext_resource type="Texture2D" uid="uid://dnkdcupe3hxh0" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-10.png" id="10_f138y"]
 [ext_resource type="Texture2D" uid="uid://b6ggltqb5gm20" path="res://Assets/Textures/Food/coffee/Untitled-Artwork-11.png" id="11_gd646"]
+
+[sub_resource type="Gradient" id="Gradient_ml6k2"]
+colors = PackedColorArray(0.560784, 0, 1, 1, 0.560784, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cktco"]
+gradient = SubResource("Gradient_ml6k2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ifx02"]
 animations = [{
@@ -62,11 +71,16 @@ height = 14.0
 script = ExtResource("1_bk4et")
 FoodType = 1
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
+texture = SubResource("GradientTexture2D_cktco")
+
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ifx02")
 frame_progress = 0.921881
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, 2)
 rotation = 1.57169
 shape = SubResource("CapsuleShape2D_fc3vi")
