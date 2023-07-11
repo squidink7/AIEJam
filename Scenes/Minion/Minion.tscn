@@ -598,7 +598,7 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5cwg7")
-animation = &"Electrocuted2"
+animation = &"Run1"
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
 z_index = -1
@@ -643,10 +643,9 @@ target_desired_distance = 60.0
 autostart = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
 position = Vector2(0, -1.90735e-06)
 scale = Vector2(2.75, 2.75)
-energy = 0.0
+energy = 0.1
 texture = SubResource("GradientTexture2D_obm06")
 
 [connection signal="Eaten" from="Sprite/Mouth" to="." method="OnEaten"]
