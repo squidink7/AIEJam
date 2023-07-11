@@ -27,24 +27,6 @@ offset_bottom = 88.4006
 scale = Vector2(4.29375, 4.29375)
 texture = ExtResource("2_oka5i")
 
-[node name="Quit" type="Button" parent="."]
-layout_mode = 0
-offset_left = 262.0
-offset_top = 377.401
-offset_right = 441.0
-offset_bottom = 451.401
-theme_override_font_sizes/font_size = 30
-text = "Quit"
-
-[node name="Retry" type="Button" parent="."]
-layout_mode = 0
-offset_left = 46.0
-offset_top = 377.401
-offset_right = 225.0
-offset_bottom = 451.401
-theme_override_font_sizes/font_size = 30
-text = "Retry"
-
 [node name="Untitled-artwork2" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 448.0
@@ -55,10 +37,10 @@ texture = ExtResource("3_4opsp")
 
 [node name="retry" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 96.0
-offset_top = 336.0
-offset_right = 407.0
-offset_bottom = 480.0
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 444.0
+offset_bottom = 496.0
 texture_normal = ExtResource("4_jls7h")
 texture_hover = ExtResource("5_ekmc2")
 ignore_texture_size = true
