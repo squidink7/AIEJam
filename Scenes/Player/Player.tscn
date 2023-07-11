@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b71x3fh1g3fha"]
+[gd_scene load_steps=51 format=3 uid="uid://b71x3fh1g3fha"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.cs" id="1_6fxqh"]
 [ext_resource type="Texture2D" uid="uid://bd3vbmahu5psx" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-1.png" id="2_2ogl8"]
@@ -30,6 +30,18 @@
 [ext_resource type="Texture2D" uid="uid://cjjmnfu145mb1" path="res://Assets/Sprites/Player/Death/Death-7.png" id="15_qrhla"]
 [ext_resource type="Texture2D" uid="uid://ctp1prwtk5qes" path="res://Assets/Sprites/Player/Death/Death-8.png" id="16_6uqnu"]
 [ext_resource type="Texture2D" uid="uid://cfv4bmclnrwjb" path="res://Assets/Sprites/Player/Death/Death-9.png" id="17_wybna"]
+[ext_resource type="Texture2D" uid="uid://bcco0pkxu56ut" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--1.png" id="18_56aax"]
+[ext_resource type="Texture2D" uid="uid://px21d4geykio" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--2.png" id="19_5gp76"]
+[ext_resource type="Texture2D" uid="uid://rf5g4meusui0" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--3.png" id="20_7o7l5"]
+[ext_resource type="Texture2D" uid="uid://2cevt174htvf" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--4.png" id="21_wqao5"]
+[ext_resource type="Texture2D" uid="uid://gxa546djsq03" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--5.png" id="22_eweox"]
+[ext_resource type="Texture2D" uid="uid://3d1gqa87v5y3" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--6.png" id="23_g2o3l"]
+[ext_resource type="Texture2D" uid="uid://14kkdcoum8c0" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--7.png" id="24_xqtre"]
+[ext_resource type="Texture2D" uid="uid://b2h0g0tdgvr8h" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--8.png" id="25_ophsr"]
+[ext_resource type="Texture2D" uid="uid://m0dwfwa3ycep" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--9.png" id="26_jpibm"]
+[ext_resource type="Texture2D" uid="uid://cxfc6rllvo3rf" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--10.png" id="27_ihjrl"]
+[ext_resource type="Texture2D" uid="uid://cck5qeu3xck8k" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--11.png" id="28_a1nry"]
+[ext_resource type="Texture2D" uid="uid://ow33yuetui63" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--12.png" id="29_ik8wp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lym42"]
 friction = 0.0
@@ -66,7 +78,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_g0p1x")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("10_jwgcl")
 }, {
 "duration": 1.0,
@@ -87,12 +99,53 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("16_6uqnu")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("17_wybna")
 }],
 "loop": false,
 "name": &"dead",
-"speed": 6.0
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("18_56aax")
+}, {
+"duration": 4.0,
+"texture": ExtResource("19_5gp76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7o7l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wqao5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_eweox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g2o3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xqtre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ophsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jpibm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ihjrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_a1nry")
+}, {
+"duration": 4.0,
+"texture": ExtResource("29_ik8wp")
+}],
+"loop": true,
+"name": &"electrocution",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -188,8 +241,8 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_itegm")
-animation = &"dead"
-frame = 8
+animation = &"chomp"
+frame = 6
 frame_progress = 1.0
 metadata/_edit_group_ = true
 

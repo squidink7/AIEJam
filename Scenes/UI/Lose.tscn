@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxlm5m7ld2dge"]
+
+[ext_resource type="Texture2D" uid="uid://c8lvajijq77g4" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork.png" id="1_3v1ik"]
+[ext_resource type="Texture2D" uid="uid://c6ndif7kekno5" path="res://Assets/Resources/start menu/IMG_6575.PNG" id="1_ik5g1"]
+[ext_resource type="Texture2D" uid="uid://dsun5osir5lmp" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork 1.png" id="2_6eqg2"]
+
+[node name="Lose" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="Img6575" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 512.0
+texture = ExtResource("1_ik5g1")
+
+[node name="Untitled-artwork" type="TextureRect" parent="."]
+offset_left = 32.0
+offset_top = 8.40055
+offset_right = 132.0
+offset_bottom = 88.4005
+scale = Vector2(4.29375, 4.29375)
+texture = ExtResource("1_3v1ik")
+
+[node name="Untitled-artwork1" type="TextureRect" parent="."]
+offset_left = 486.0
+offset_top = 358.906
+offset_right = 630.0
+offset_bottom = 431.906
+rotation = -0.867451
+scale = Vector2(3.55931, 3.55931)
+texture = ExtResource("2_6eqg2")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 262.0
+offset_top = 377.401
+offset_right = 441.0
+offset_bottom = 451.401
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="Retry" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 377.401
+offset_right = 225.0
+offset_bottom = 451.401
+theme_override_font_sizes/font_size = 30
+text = "Retry"
