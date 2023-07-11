@@ -146,7 +146,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_o2g5p")
 }],
-"loop": true,
+"loop": false,
 "name": &"Chomp0",
 "speed": 15.0
 }, {
@@ -172,7 +172,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_8xkk6")
 }],
-"loop": true,
+"loop": false,
 "name": &"Chomp1",
 "speed": 15.0
 }, {
@@ -198,7 +198,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("22_h00u2")
 }],
-"loop": true,
+"loop": false,
 "name": &"Chomp2",
 "speed": 15.0
 }, {
@@ -230,7 +230,7 @@ animations = [{
 "duration": 2.0,
 "texture": ExtResource("24_pax6u")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death0",
 "speed": 2.0
 }, {
@@ -262,7 +262,7 @@ animations = [{
 "duration": 2.0,
 "texture": ExtResource("33_hkvvv")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death1",
 "speed": 2.0
 }, {
@@ -294,7 +294,7 @@ animations = [{
 "duration": 2.0,
 "texture": ExtResource("42_s8spu")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death2",
 "speed": 2.0
 }, {
@@ -335,7 +335,7 @@ animations = [{
 "duration": 4.0,
 "texture": ExtResource("54_4gfn8")
 }],
-"loop": true,
+"loop": false,
 "name": &"Electrocuted0",
 "speed": 10.0
 }, {
@@ -376,7 +376,7 @@ animations = [{
 "duration": 4.0,
 "texture": ExtResource("66_ka7qm")
 }],
-"loop": true,
+"loop": false,
 "name": &"Electrocuted1",
 "speed": 10.0
 }, {
@@ -417,7 +417,7 @@ animations = [{
 "duration": 4.0,
 "texture": ExtResource("66_ka7qm")
 }],
-"loop": true,
+"loop": false,
 "name": &"Electrocuted2",
 "speed": 10.0
 }, {
@@ -552,6 +552,8 @@ particle_flag_disable_z = true
 gravity = Vector3(0, 0, 0)
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
+scale_min = 2.0
+scale_max = 2.0
 color = Color(0.392157, 0.392157, 0.392157, 1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5h863"]
@@ -595,7 +597,7 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5cwg7")
-animation = &"Chomp0"
+animation = &"Electrocuted2"
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
 z_index = -1
@@ -645,5 +647,6 @@ scale = Vector2(2.75, 2.75)
 energy = 0.3
 texture = SubResource("GradientTexture2D_obm06")
 
+[connection signal="Eaten" from="Sprite/Mouth" to="." method="OnEaten"]
 [connection signal="area_entered" from="Sprite/Mouth" to="Sprite/Mouth" method="OnEnter"]
 [connection signal="timeout" from="Navigation/LocateTimer" to="." method="FindParent"]

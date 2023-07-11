@@ -1,24 +1,39 @@
-[gd_scene format=3 uid="uid://dgbtj61tdfgvq"]
+[gd_scene load_steps=3 format=3 uid="uid://dgbtj61tdfgvq"]
 
-[node name="UI" type="Control"]
+[ext_resource type="Script" path="res://Scenes/UI/UI.cs" id="1_mm5c2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emlhv"]
+bg_color = Color(0.298039, 0.619608, 0.913725, 0.588235)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="UI" type="Control" node_paths=PackedStringArray("Bar")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mm5c2")
+Bar = NodePath("ProgressBar")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 64.0
-offset_bottom = 40.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 9
 text = "Energy"
+horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 8.0
-offset_right = 264.0
-offset_bottom = 40.0
+offset_right = 192.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 8
+theme_override_styles/fill = SubResource("StyleBoxFlat_emlhv")
