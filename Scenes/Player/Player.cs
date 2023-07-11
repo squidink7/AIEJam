@@ -79,6 +79,7 @@ public partial class Player : RigidBody2D
 	async void OnEaten(int type)
 	{
 		var foodType = (FoodType)type;
+		
 		if (foodType == FoodType.Normal)
 		{
 			State = PlayerState.Eating;

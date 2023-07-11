@@ -14,7 +14,7 @@ public partial class FoodSpawner : Node
 		var posX = Random.Shared.Next() % World.GetUsedRect().Size.X * 32;
 		var posY = Random.Shared.Next() % World.GetUsedRect().Size.Y * 32;
 
-		var newRat = FoodScenes[Random.Shared.Next() % FoodScenes.Length].Instantiate<Food>();
+		var newRat = FoodScenes[Random.Shared.Next() % FoodScenes.Length].Instantiate<Node2D>();
 		GetNode("/root/Game").AddChild(newRat);
 
 		newRat.GlobalPosition = new Vector2(posX, posY);

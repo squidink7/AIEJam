@@ -39,7 +39,7 @@ _data = {
 "bob": SubResource("Animation_kqrvh")
 }
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" node_paths=PackedStringArray("Animator")]
 layout_mode = 3
 anchor_left = -0.008
 anchor_right = -0.008
@@ -47,6 +47,7 @@ offset_left = 0.192
 offset_right = 1032.19
 offset_bottom = 512.0
 script = ExtResource("1_r1oup")
+Animator = NodePath("AnimationPlayer")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_ipt1e")

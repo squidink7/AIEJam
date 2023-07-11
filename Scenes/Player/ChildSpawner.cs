@@ -11,10 +11,8 @@ public partial class ChildSpawner : Node2D
 
     public override void _Ready()
     {
-        RatCount = 0;
+        RatCount = 98;
     }
-
-    
 
 	void TimerTick()
 	{

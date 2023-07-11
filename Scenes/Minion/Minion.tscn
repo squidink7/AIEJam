@@ -598,7 +598,7 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5cwg7")
-animation = &"Electrocuted2"
+animation = &"Run1"
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
 z_index = -1
