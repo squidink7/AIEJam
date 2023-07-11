@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://q2gdarwp1y57"]
+
+[ext_resource type="Texture2D" uid="uid://rtvew8ivjmiw" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6581 - Copy (2).PNG" id="1_rove8"]
+[ext_resource type="Texture2D" uid="uid://doxth6u6vfy57" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6580 - Copy (2).PNG" id="2_km81i"]
+
+[node name="retry" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="retry" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0
+texture_normal = ExtResource("1_rove8")
+texture_hover = ExtResource("2_km81i")
+ignore_texture_size = true
+stretch_mode = 4
