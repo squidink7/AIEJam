@@ -78,7 +78,7 @@ texture = SubResource("GradientTexture2D_cktco")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ifx02")
 autoplay = "default"
-frame_progress = 0.0557561
+frame_progress = 0.498552
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
