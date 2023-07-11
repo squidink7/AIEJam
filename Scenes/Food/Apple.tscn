@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0q85pq36fooy"]
+
+[ext_resource type="Texture2D" uid="uid://bvdw5snxa4wi6" path="res://Assets/Textures/Food/Untitled-Artwork 1(1).png" id="1_ebt38"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cm2xg"]
+radius = 16.0
+
+[node name="Apple" type="Area2D"]
+
+[node name="Untitled-artwork1(1)" type="Sprite2D" parent="."]
+texture = ExtResource("1_ebt38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cm2xg")

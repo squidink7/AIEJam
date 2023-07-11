@@ -119,3 +119,6 @@ metadata/_edit_group_ = true
 libraries = {
 "": SubResource("AnimationLibrary_5dxjg")
 }
+
+[connection signal="pressed" from="start" to="." method="startclick"]
+[connection signal="pressed" from="quit" to="." method="quitclick"]

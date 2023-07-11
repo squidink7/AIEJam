@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://gb2yxcjhv5fm"]
+[gd_scene load_steps=7 format=3 uid="uid://1lsq5e5cjst4"]
 
 [ext_resource type="Texture2D" uid="uid://c6ndif7kekno5" path="res://Assets/Resources/start menu/IMG_6575.PNG" id="1_e4dl5"]
 [ext_resource type="Texture2D" uid="uid://k0mmyn3d6eq5" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork 3.png" id="2_oka5i"]
 [ext_resource type="Texture2D" uid="uid://dn3p38mhbbsei" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork 2.png" id="3_4opsp"]
+[ext_resource type="Texture2D" uid="uid://rtvew8ivjmiw" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6581 - Copy (2).PNG" id="4_jls7h"]
+[ext_resource type="Texture2D" uid="uid://doxth6u6vfy57" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6580 - Copy (2).PNG" id="5_ekmc2"]
+[ext_resource type="Script" path="res://Scenes/UI/retry.cs" id="6_tsmjf"]
 
 [node name="Lose" type="Control"]
 layout_mode = 3
@@ -17,28 +20,28 @@ texture = ExtResource("1_e4dl5")
 
 [node name="Untitled-artwork" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 32.0
-offset_right = 116.0
-offset_bottom = 112.0
+offset_left = 24.0
+offset_top = 8.40055
+offset_right = 124.0
+offset_bottom = 88.4006
 scale = Vector2(4.29375, 4.29375)
 texture = ExtResource("2_oka5i")
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 254.0
-offset_top = 401.0
-offset_right = 433.0
-offset_bottom = 475.0
+offset_left = 262.0
+offset_top = 377.401
+offset_right = 441.0
+offset_bottom = 451.401
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 
 [node name="Retry" type="Button" parent="."]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 401.0
-offset_right = 217.0
-offset_bottom = 475.0
+offset_left = 46.0
+offset_top = 377.401
+offset_right = 225.0
+offset_bottom = 451.401
 theme_override_font_sizes/font_size = 30
 text = "Retry"
 
@@ -49,3 +52,17 @@ offset_top = 160.0
 offset_right = 999.0
 offset_bottom = 480.0
 texture = ExtResource("3_4opsp")
+
+[node name="retry" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 336.0
+offset_right = 407.0
+offset_bottom = 480.0
+texture_normal = ExtResource("4_jls7h")
+texture_hover = ExtResource("5_ekmc2")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("6_tsmjf")
+
+[connection signal="pressed" from="retry" to="retry" method="retryclick"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2q1alfdxvymv"]
+[gd_scene load_steps=8 format=3 uid="uid://bxlm5m7ld2dge"]
 
 [ext_resource type="Texture2D" uid="uid://c8lvajijq77g4" path="res://Assets/Resources/Win and Lose UI/Untitled-Artwork.png" id="1_3v1ik"]
 [ext_resource type="Texture2D" uid="uid://c6ndif7kekno5" path="res://Assets/Resources/start menu/IMG_6575.PNG" id="1_ik5g1"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b1oiyknk42hh5" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6574 (2).PNG" id="6_8uo3s"]
 [ext_resource type="Texture2D" uid="uid://rc60tfg87qja" path="res://Assets/Resources/start menu/FIXED start menu/IMG_6573 (3).PNG" id="7_0iu6d"]
 
-[node name="Lose" type="Control"]
+[node name="Lose2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 scale = Vector2(0.5, 0.5)

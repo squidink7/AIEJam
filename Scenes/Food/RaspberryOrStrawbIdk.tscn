@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://4t4778u7sh0n"]
+
+[ext_resource type="Texture2D" uid="uid://d3fj1ju1gx3ae" path="res://Assets/Textures/Food/Untitled-Artwork(1).png" id="1_3j803"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l65cn"]
+radius = 7.0
+height = 20.0
+
+[node name="RaspberryOrStrawbIdk" type="Area2D"]
+
+[node name="Untitled-artwork(1)" type="Sprite2D" parent="."]
+texture = ExtResource("1_3j803")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_l65cn")
