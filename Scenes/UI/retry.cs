@@ -1,25 +1,19 @@
 using Godot;
 using System;
 
-public partial class Menu : Control
+public partial class retry : TextureButton
 {
-	[Export] AnimationPlayer animator;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
-	{
-		animator.Play("bob");
+	{ 
 	}
-
+	void retryclick (){
+		GetTree().ChangeSceneToFile("res://Scenes/Menu/Menu.tscn");
+	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 	}
-void startclick (){
-		GetTree().ChangeSceneToFile("res://Scenes/Game/Game.tscn");
-		
-	}
-void quitclick (){
-		GetTree().Quit();
-		}
 }
+
 
