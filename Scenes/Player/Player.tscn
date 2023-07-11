@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b71x3fh1g3fha"]
+[gd_scene load_steps=39 format=3 uid="uid://b71x3fh1g3fha"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.cs" id="1_6fxqh"]
 [ext_resource type="Texture2D" uid="uid://bd3vbmahu5psx" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-1.png" id="2_2ogl8"]
@@ -15,12 +15,21 @@
 [ext_resource type="Texture2D" uid="uid://1jsr47d6e2xs" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-6.png" id="7_q7r6i"]
 [ext_resource type="Texture2D" uid="uid://55kwmpjxxbm1" path="res://Assets/Sprites/Player/Chomp/chomp7.png" id="8_jrkrm"]
 [ext_resource type="Texture2D" uid="uid://r0sljh82uwf1" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-7.png" id="8_lduwq"]
+[ext_resource type="Texture2D" uid="uid://dn3fyxd4dhfhw" path="res://Assets/Sprites/Player/Death/Death-1.png" id="9_g0p1x"]
 [ext_resource type="Texture2D" uid="uid://cpm1ta0e4qx0n" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-8.png" id="9_qac33"]
+[ext_resource type="Texture2D" uid="uid://dfn3xw1kfcen4" path="res://Assets/Sprites/Player/Death/Death-2.png" id="10_jwgcl"]
 [ext_resource type="Texture2D" uid="uid://bw6u6ppcyg0p" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-9.png" id="10_mrvhm"]
 [ext_resource type="Texture2D" uid="uid://chra37ypx6ruj" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-10.png" id="11_2hx6r"]
+[ext_resource type="Texture2D" uid="uid://bjvm0gsahot1a" path="res://Assets/Sprites/Player/Death/Death-3.png" id="11_yj8mn"]
 [ext_resource type="Texture2D" uid="uid://cqy0fkq44sg73" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-11.png" id="12_18o10"]
+[ext_resource type="Texture2D" uid="uid://c2aab6l545nv0" path="res://Assets/Sprites/Player/Death/Death-4.png" id="12_x450y"]
 [ext_resource type="Texture2D" uid="uid://b73e8e4658rya" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-12.png" id="13_ejx6l"]
+[ext_resource type="Texture2D" uid="uid://c27siayc8cvfp" path="res://Assets/Sprites/Player/Death/Death-5.png" id="13_qwirf"]
+[ext_resource type="Texture2D" uid="uid://jjrjobs3sm4y" path="res://Assets/Sprites/Player/Death/Death-6.png" id="14_th7d5"]
 [ext_resource type="Script" path="res://Scenes/Player/Mouth.cs" id="14_w3rwr"]
+[ext_resource type="Texture2D" uid="uid://cjjmnfu145mb1" path="res://Assets/Sprites/Player/Death/Death-7.png" id="15_qrhla"]
+[ext_resource type="Texture2D" uid="uid://ctp1prwtk5qes" path="res://Assets/Sprites/Player/Death/Death-8.png" id="16_6uqnu"]
+[ext_resource type="Texture2D" uid="uid://cfv4bmclnrwjb" path="res://Assets/Sprites/Player/Death/Death-9.png" id="17_wybna"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lym42"]
 friction = 0.0
@@ -52,6 +61,38 @@ animations = [{
 "loop": false,
 "name": &"chomp",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_g0p1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jwgcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yj8mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x450y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qwirf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_th7d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qrhla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6uqnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wybna")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -120,7 +161,19 @@ radius = 8.0
 radius = 8.0
 height = 64.0
 
+[sub_resource type="Gradient" id="Gradient_jy0ad"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2otw8"]
+gradient = SubResource("Gradient_jy0ad")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
 [node name="Player" type="RigidBody2D" node_paths=PackedStringArray("Sprite", "Particles", "Particles2")]
+collision_layer = 2
+collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_lym42")
 lock_rotation = true
 linear_damp = 5.0
@@ -135,7 +188,9 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_itegm")
-animation = &"run"
+animation = &"dead"
+frame = 8
+frame_progress = 1.0
 metadata/_edit_group_ = true
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
@@ -144,7 +199,6 @@ position = Vector2(-8.5, 2.5)
 emitting = false
 amount = 16
 process_material = SubResource("ParticleProcessMaterial_8o50y")
-lifetime = 3.0
 
 [node name="StepParticles2" type="GPUParticles2D" parent="Sprite"]
 z_index = -1
@@ -152,7 +206,6 @@ position = Vector2(-2, 2.5)
 emitting = false
 amount = 16
 process_material = SubResource("ParticleProcessMaterial_8o50y")
-lifetime = 3.0
 
 [node name="HealthParticles" type="GPUParticles2D" parent="Sprite"]
 emitting = false
@@ -178,5 +231,12 @@ limit_top = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(2.75, 2.75)
+energy = 0.8
+texture = SubResource("GradientTexture2D_2otw8")
+
 [connection signal="FoodEaten" from="Sprite/Mouth" to="." method="OnFoodEaten"]
+[connection signal="PoisonEaten" from="Sprite/Mouth" to="." method="OnPoisonEaten"]
 [connection signal="area_entered" from="Sprite/Mouth" to="Sprite/Mouth" method="OnEnter"]
