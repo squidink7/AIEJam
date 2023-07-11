@@ -120,7 +120,7 @@ public partial class Player : RigidBody2D
 	{
 		if (ev.IsActionPressed("Quit"))
 		{
-			GetTree().Quit();
+			GetTree().ChangeSceneToFile("res://Scenes/Menu/Menu.tscn");
 		}
 	}
 }
