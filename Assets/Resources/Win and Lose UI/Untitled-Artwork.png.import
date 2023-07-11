@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqyjbvkmf5fma"
-path="res://.godot/imported/chomp4.png-d10d8d0eb2ab2fe357081cf51ff41753.ctex"
+uid="uid://c8lvajijq77g4"
+path="res://.godot/imported/Untitled-Artwork.png-8097a15f059729f073b063a4f1b603f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Chomp/chomp4.png"
-dest_files=["res://.godot/imported/chomp4.png-d10d8d0eb2ab2fe357081cf51ff41753.ctex"]
+source_file="res://Assets/Resources/Win and Lose UI/Untitled-Artwork.png"
+dest_files=["res://.godot/imported/Untitled-Artwork.png-8097a15f059729f073b063a4f1b603f4.ctex"]
 
 [params]
 

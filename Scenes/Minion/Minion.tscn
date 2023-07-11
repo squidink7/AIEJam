@@ -1,53 +1,426 @@
-[gd_scene load_steps=53 format=3 uid="uid://02ahvnhyihxo"]
+[gd_scene load_steps=129 format=3 uid="uid://02ahvnhyihxo"]
 
 [ext_resource type="Script" path="res://Scenes/Minion/Minion.cs" id="1_bagwy"]
-[ext_resource type="Texture2D" uid="uid://cl17x2l1jmimw" path="res://Assets/Sprites/Player/Chomp/chomp1.png" id="2_a5cbi"]
 [ext_resource type="Texture2D" uid="uid://bibkn4klgo2q1" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-1.png" id="2_g65hx"]
-[ext_resource type="Texture2D" uid="uid://7d1v5uisvxeg" path="res://Assets/Sprites/Player/Chomp/chomp2.png" id="3_1xm7p"]
+[ext_resource type="Texture2D" uid="uid://wlwtdeoxrwox" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-1.png" id="2_ic6ie"]
+[ext_resource type="Texture2D" uid="uid://bse2dwdqtn2c" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-2.png" id="3_0i6m8"]
 [ext_resource type="Texture2D" uid="uid://gkm6mlkyhqbj" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-2.png" id="3_qa5w3"]
+[ext_resource type="Texture2D" uid="uid://conwhgf42uog8" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-3.png" id="4_855f7"]
 [ext_resource type="Texture2D" uid="uid://c77v8i5036jv4" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-3.png" id="4_fkppp"]
-[ext_resource type="Texture2D" uid="uid://b4g1jpy76bebu" path="res://Assets/Sprites/Player/Chomp/chomp3.png" id="4_ulp2t"]
-[ext_resource type="Texture2D" uid="uid://bq8l2bhluxfql" path="res://Assets/Sprites/Player/Chomp/chomp5.png" id="5_r1wn3"]
+[ext_resource type="Texture2D" uid="uid://dbdqfkll0kc1j" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-4.png" id="5_33ddx"]
 [ext_resource type="Texture2D" uid="uid://c1j1b0j57abt0" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-4.png" id="5_rkkhy"]
-[ext_resource type="Texture2D" uid="uid://cqyjbvkmf5fma" path="res://Assets/Sprites/Player/Chomp/chomp4.png" id="6_2y5lg"]
+[ext_resource type="Texture2D" uid="uid://cow0opul3cj8o" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-5.png" id="6_52r8j"]
 [ext_resource type="Texture2D" uid="uid://l40xbm26bjil" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-5.png" id="6_yeb3d"]
-[ext_resource type="Texture2D" uid="uid://xwbm0pko73qi" path="res://Assets/Sprites/Player/Chomp/chomp6.png" id="7_5o6sy"]
 [ext_resource type="Texture2D" uid="uid://csc65cdpanpuh" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-6.png" id="7_cr2lo"]
+[ext_resource type="Texture2D" uid="uid://dl3acfdl8q41y" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-6.png" id="7_k2nom"]
 [ext_resource type="Texture2D" uid="uid://dlb7h6d1vrn7e" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-7.png" id="8_871lm"]
-[ext_resource type="Texture2D" uid="uid://55kwmpjxxbm1" path="res://Assets/Sprites/Player/Chomp/chomp7.png" id="8_ktn1x"]
+[ext_resource type="Texture2D" uid="uid://vcb2m8fgs0bs" path="res://Assets/Sprites/Minions/Black/Eating/MinionBlackNomNom-7.png" id="8_o2g5p"]
 [ext_resource type="Texture2D" uid="uid://cp2yipxo12au7" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-8.png" id="9_ipfia"]
+[ext_resource type="Texture2D" uid="uid://fkd8no57m6hg" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-1.png" id="9_r38ug"]
+[ext_resource type="Texture2D" uid="uid://dcwvfvpkfiy7g" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-2.png" id="10_4afj1"]
 [ext_resource type="Texture2D" uid="uid://dhopjhpdu6fvo" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-9.png" id="10_a2e84"]
+[ext_resource type="Texture2D" uid="uid://cf7ojt7x11bst" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-3.png" id="11_mgkco"]
 [ext_resource type="Texture2D" uid="uid://mx3ghf1dh85i" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-10.png" id="11_vaan0"]
 [ext_resource type="Texture2D" uid="uid://c4fwgjtjxwuxv" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-11.png" id="12_4mbmg"]
+[ext_resource type="Texture2D" uid="uid://81g5mxqsdo6e" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-4.png" id="12_7td0e"]
+[ext_resource type="Texture2D" uid="uid://b7ghiglwh0erb" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-5.png" id="13_hh5vq"]
 [ext_resource type="Texture2D" uid="uid://ppave570lpx" path="res://Assets/Sprites/Minions/Black/Running/MinionBlack-12.png" id="13_vc1td"]
+[ext_resource type="Texture2D" uid="uid://qj2p6vydqjf3" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-6.png" id="14_ambn7"]
 [ext_resource type="Texture2D" uid="uid://sphug314cayt" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-1.png" id="14_dj0n8"]
+[ext_resource type="Texture2D" uid="uid://lqds3hmvx767" path="res://Assets/Sprites/Minions/Brown/Eating/MinionBrownNomNom-7.png" id="15_8xkk6"]
 [ext_resource type="Texture2D" uid="uid://do7aj2vs2dxw7" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-2.png" id="15_fm8fs"]
+[ext_resource type="Texture2D" uid="uid://rm4upftw4lbq" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-1.png" id="16_ghjno"]
 [ext_resource type="Texture2D" uid="uid://wl03a47k8o2g" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-3.png" id="16_h5sus"]
+[ext_resource type="Texture2D" uid="uid://dl2adh5s87sec" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-1.png" id="16_lr3y2"]
 [ext_resource type="Texture2D" uid="uid://0x6grpjx1r8a" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-4.png" id="17_13g86"]
+[ext_resource type="Texture2D" uid="uid://cwg8t62shwg0t" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-2.png" id="17_oh6p5"]
+[ext_resource type="Texture2D" uid="uid://cqruv5wxyn50s" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-2.png" id="17_tb73d"]
 [ext_resource type="Texture2D" uid="uid://dod543ilkmmh6" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-5.png" id="18_8t83g"]
+[ext_resource type="Texture2D" uid="uid://dsiqmv8pr14hp" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-3.png" id="18_jgxj0"]
+[ext_resource type="Texture2D" uid="uid://bhmqtf5jprsy2" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-3.png" id="18_tgqtc"]
 [ext_resource type="Texture2D" uid="uid://dn3of50dsmlht" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-6.png" id="19_4ltct"]
+[ext_resource type="Texture2D" uid="uid://by4klhmfipxk" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-4.png" id="19_ro2xf"]
+[ext_resource type="Texture2D" uid="uid://caa17d8bljcl8" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-4.png" id="19_ux3f5"]
+[ext_resource type="Texture2D" uid="uid://dx06xai06jadu" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-5.png" id="20_ddrc6"]
+[ext_resource type="Texture2D" uid="uid://l7lerp8gi3dh" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-5.png" id="20_qutd0"]
 [ext_resource type="Texture2D" uid="uid://drev2jhruwv24" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-7.png" id="20_v2gi1"]
+[ext_resource type="Texture2D" uid="uid://br51hshb8xejt" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-6.png" id="21_buvfk"]
 [ext_resource type="Texture2D" uid="uid://cm2l3vm3a8e71" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-8.png" id="21_h58yg"]
+[ext_resource type="Texture2D" uid="uid://ckhk0ga5w0rbx" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-6.png" id="21_m6wih"]
 [ext_resource type="Script" path="res://Scenes/Player/Mouth.cs" id="21_qa5a5"]
 [ext_resource type="Texture2D" uid="uid://i5xa0gmtrce" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-9.png" id="22_6kgtk"]
+[ext_resource type="Texture2D" uid="uid://b7xc2rpjkskd8" path="res://Assets/Sprites/Minions/White/Eating/MinionWhiteNomNom-7.png" id="22_h00u2"]
+[ext_resource type="Texture2D" uid="uid://dpdny3316iapa" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-7.png" id="22_oegpq"]
 [ext_resource type="Texture2D" uid="uid://vu087tm0pryk" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-10.png" id="23_bjr2a"]
+[ext_resource type="Texture2D" uid="uid://diba4i1lkbddw" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-8.png" id="23_lmwxl"]
 [ext_resource type="Texture2D" uid="uid://bt8swgf5wllon" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-11.png" id="24_5qger"]
+[ext_resource type="Texture2D" uid="uid://c71colan154pm" path="res://Assets/Sprites/Minions/Black/Death/MinionBlackDeath-9.png" id="24_pax6u"]
+[ext_resource type="Texture2D" uid="uid://1vibmil57e78" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-1.png" id="25_1cgmi"]
 [ext_resource type="Texture2D" uid="uid://bttpatd3ranj6" path="res://Assets/Sprites/Minions/Brown/Running/MinionBrown-12.png" id="25_fjbfq"]
+[ext_resource type="Texture2D" uid="uid://b1nfwcfoqkv0i" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-2.png" id="26_rlxka"]
 [ext_resource type="Texture2D" uid="uid://p07pqjaxsjxd" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-1.png" id="26_sh3qx"]
+[ext_resource type="Texture2D" uid="uid://bxyifnim21dl2" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-3.png" id="27_o8cyt"]
 [ext_resource type="Texture2D" uid="uid://dct011owjgoul" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-2.png" id="27_tosiv"]
 [ext_resource type="Texture2D" uid="uid://cbsi8lmk3rrke" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-3.png" id="28_47lqn"]
+[ext_resource type="Texture2D" uid="uid://ck88k3pbrrrdh" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-4.png" id="28_cvm1e"]
 [ext_resource type="Texture2D" uid="uid://b825uqd61lh2c" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-4.png" id="29_6kyv7"]
+[ext_resource type="Texture2D" uid="uid://i8o0g06kjq7q" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-5.png" id="29_fw3vv"]
 [ext_resource type="Texture2D" uid="uid://cv8uvint1uls8" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-5.png" id="30_45yhf"]
+[ext_resource type="Texture2D" uid="uid://bc118ddkay4c3" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-6.png" id="30_uhqbq"]
+[ext_resource type="Texture2D" uid="uid://d2g3dtx8ghu1x" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-7.png" id="31_1fx5n"]
 [ext_resource type="Texture2D" uid="uid://brc54opqcgi1d" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-6.png" id="31_hdwcr"]
 [ext_resource type="Texture2D" uid="uid://dmyfunjdf8jb8" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-7.png" id="32_np66i"]
+[ext_resource type="Texture2D" uid="uid://c8vdoh03xyuru" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-8.png" id="32_x4sq6"]
 [ext_resource type="Texture2D" uid="uid://c5e6ugucvwaaf" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-8.png" id="33_fyexj"]
+[ext_resource type="Texture2D" uid="uid://bqp1t48yfo6fn" path="res://Assets/Sprites/Minions/Brown/Death/MinionBrownDeath-9.png" id="33_hkvvv"]
+[ext_resource type="Texture2D" uid="uid://bbx6qnjq2rdeo" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-1.png" id="34_kydq0"]
 [ext_resource type="Texture2D" uid="uid://c5c7s45qpkfe2" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-9.png" id="34_ur544"]
 [ext_resource type="Texture2D" uid="uid://cj0qme32xkwx5" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-10.png" id="35_kgi71"]
+[ext_resource type="Texture2D" uid="uid://bjpjyrfsuicsp" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-2.png" id="35_qhmwa"]
+[ext_resource type="Texture2D" uid="uid://8e64cpnk6klr" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-3.png" id="36_5wynj"]
 [ext_resource type="Texture2D" uid="uid://cyqp35yi7f2no" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-11.png" id="36_dmud8"]
 [ext_resource type="Texture2D" uid="uid://dddchbfc7kcrw" path="res://Assets/Sprites/Minions/White/Running/MinionWhite-12.png" id="37_7qy37"]
+[ext_resource type="Texture2D" uid="uid://c3qoep2tokncx" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-4.png" id="37_pb3qh"]
+[ext_resource type="Texture2D" uid="uid://bsw5iqwueh6t6" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-5.png" id="38_mfo0t"]
+[ext_resource type="Texture2D" uid="uid://cstfvh7ma3e8n" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-6.png" id="39_ynhqp"]
+[ext_resource type="Texture2D" uid="uid://pg0bbb3qh2r2" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-7.png" id="40_thr5x"]
+[ext_resource type="Texture2D" uid="uid://dp6wmgn2axvjj" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-8.png" id="41_jmkau"]
+[ext_resource type="Texture2D" uid="uid://b58gr57ks362j" path="res://Assets/Sprites/Minions/White/Death/MinionWhiteDeath-9.png" id="42_s8spu"]
+[ext_resource type="Texture2D" uid="uid://8gdnh6ji7xwc" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--1.png" id="43_lcsv3"]
+[ext_resource type="Texture2D" uid="uid://d0fgxvfy0iqs8" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--2.png" id="44_6e0gg"]
+[ext_resource type="Texture2D" uid="uid://bow7gaye6jynh" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--3.png" id="45_jtpe6"]
+[ext_resource type="Texture2D" uid="uid://bacnyt2jjguln" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--4.png" id="46_svm3e"]
+[ext_resource type="Texture2D" uid="uid://qdiku8xmxaqv" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--5.png" id="47_k67w4"]
+[ext_resource type="Texture2D" uid="uid://dxp4tagw071e6" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--6.png" id="48_mdtk8"]
+[ext_resource type="Texture2D" uid="uid://cia4v0nt4ircv" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--7.png" id="49_7jaq4"]
+[ext_resource type="Texture2D" uid="uid://xf3vnjwgf7" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--8.png" id="50_y6u8y"]
+[ext_resource type="Texture2D" uid="uid://bj6h12v2fs3ho" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--9.png" id="51_s80hl"]
+[ext_resource type="Texture2D" uid="uid://nitefn7h2auc" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--10.png" id="52_woqsc"]
+[ext_resource type="Texture2D" uid="uid://cqt651lsn3gri" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--11.png" id="53_a1knt"]
+[ext_resource type="Texture2D" uid="uid://b2c8idwgsbre1" path="res://Assets/Sprites/Minions/Black/Electrocuted/MinionBlackElectrocuted--12.png" id="54_4gfn8"]
+[ext_resource type="Texture2D" uid="uid://i2vjllicf6mi" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--1.png" id="55_dl4ho"]
+[ext_resource type="Texture2D" uid="uid://d3v0cks054n7i" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--2.png" id="56_rhy8c"]
+[ext_resource type="Texture2D" uid="uid://d1t0a25dsvnax" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--3.png" id="57_nx1xj"]
+[ext_resource type="Texture2D" uid="uid://c7770akyxl4fe" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--4.png" id="58_y7gg6"]
+[ext_resource type="Texture2D" uid="uid://vambdy1spnxg" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--5.png" id="59_txcxt"]
+[ext_resource type="Texture2D" uid="uid://styk3xno0qge" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--6.png" id="60_2a71f"]
+[ext_resource type="Texture2D" uid="uid://chrdhuy0enlqg" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--7.png" id="61_e2jfx"]
+[ext_resource type="Texture2D" uid="uid://bdgdel5nfm13g" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--8.png" id="62_q63qm"]
+[ext_resource type="Texture2D" uid="uid://plgdxiyhbjnd" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--9.png" id="63_diwvr"]
+[ext_resource type="Texture2D" uid="uid://mtfwfagsitu4" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--10.png" id="64_myvfs"]
+[ext_resource type="Texture2D" uid="uid://ht3aymk1sy5j" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--11.png" id="65_wdj0e"]
+[ext_resource type="Texture2D" uid="uid://c5q7h88x7r3gs" path="res://Assets/Sprites/Minions/Brown/Electrocuted/MinionBrownElectrocuted--12.png" id="66_ka7qm"]
+[ext_resource type="Texture2D" uid="uid://bfvkyji8v56q3" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--1.png" id="74_xud2j"]
+[ext_resource type="Texture2D" uid="uid://bd836sm0fkr87" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--2.png" id="75_gvm68"]
+[ext_resource type="Texture2D" uid="uid://cw1icl3tt7fjv" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--3.png" id="76_2i5nu"]
+[ext_resource type="Texture2D" uid="uid://dsyn0ljt211ic" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--4.png" id="77_j4tk1"]
+[ext_resource type="Texture2D" uid="uid://26vq4l0v2o40" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--5.png" id="78_1ymg1"]
+[ext_resource type="Texture2D" uid="uid://b0g1gnvdquwoa" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--6.png" id="79_u0t38"]
+[ext_resource type="Texture2D" uid="uid://dg45ua1ef7ahf" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--7.png" id="80_x0hlv"]
+[ext_resource type="Texture2D" uid="uid://128bkc5m80bc" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--8.png" id="81_r3g5b"]
+[ext_resource type="Texture2D" uid="uid://bvdut34003vh7" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--9.png" id="82_rcu3f"]
+[ext_resource type="Texture2D" uid="uid://doi5cd0guj2yd" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--10.png" id="83_b8dli"]
+[ext_resource type="Texture2D" uid="uid://dahg0ka8kpx5w" path="res://Assets/Sprites/Minions/White/Electrocuted/MinionWhiteElectrocuted--11.png" id="84_jem21"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5cwg7"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ic6ie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0i6m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_855f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_33ddx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_52r8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k2nom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o2g5p")
+}],
+"loop": true,
+"name": &"Chomp0",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_r38ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4afj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mgkco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7td0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hh5vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ambn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8xkk6")
+}],
+"loop": true,
+"name": &"Chomp1",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ghjno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tb73d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jgxj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ro2xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qutd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_buvfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_h00u2")
+}],
+"loop": true,
+"name": &"Chomp2",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_lr3y2")
+}, {
+"duration": 2.0,
+"texture": ExtResource("17_oh6p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tgqtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ux3f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ddrc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_m6wih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oegpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lmwxl")
+}, {
+"duration": 2.0,
+"texture": ExtResource("24_pax6u")
+}],
+"loop": true,
+"name": &"Death0",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_1cgmi")
+}, {
+"duration": 2.0,
+"texture": ExtResource("26_rlxka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_o8cyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cvm1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fw3vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_uhqbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1fx5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_x4sq6")
+}, {
+"duration": 2.0,
+"texture": ExtResource("33_hkvvv")
+}],
+"loop": true,
+"name": &"Death1",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_kydq0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("35_qhmwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5wynj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pb3qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mfo0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ynhqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_thr5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jmkau")
+}, {
+"duration": 2.0,
+"texture": ExtResource("42_s8spu")
+}],
+"loop": true,
+"name": &"Death2",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("43_lcsv3")
+}, {
+"duration": 4.0,
+"texture": ExtResource("44_6e0gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_jtpe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_svm3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_k67w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_mdtk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7jaq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_y6u8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_s80hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_woqsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_a1knt")
+}, {
+"duration": 4.0,
+"texture": ExtResource("54_4gfn8")
+}],
+"loop": true,
+"name": &"Electrocuted0",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("55_dl4ho")
+}, {
+"duration": 4.0,
+"texture": ExtResource("56_rhy8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_nx1xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_y7gg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_txcxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2a71f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_e2jfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_q63qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_diwvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_myvfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_wdj0e")
+}, {
+"duration": 4.0,
+"texture": ExtResource("66_ka7qm")
+}],
+"loop": true,
+"name": &"Electrocuted1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("74_xud2j")
+}, {
+"duration": 4.0,
+"texture": ExtResource("75_gvm68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_2i5nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_j4tk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_1ymg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_u0t38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_x0hlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_r3g5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_rcu3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_b8dli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_jem21")
+}, {
+"duration": 4.0,
+"texture": ExtResource("66_ka7qm")
+}],
+"loop": true,
+"name": &"Electrocuted2",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_g65hx")
@@ -128,7 +501,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run1",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -169,32 +542,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_a5cbi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_1xm7p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ulp2t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_r1wn3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_2y5lg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_5o6sy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_ktn1x")
-}],
-"loop": false,
-"name": &"chomp",
 "speed": 15.0
 }]
 
@@ -248,8 +595,7 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5cwg7")
-animation = &"Run2"
-metadata/_edit_group_ = true
+animation = &"Chomp0"
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
 z_index = -1

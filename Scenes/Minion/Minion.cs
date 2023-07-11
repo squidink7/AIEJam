@@ -83,7 +83,7 @@ public partial class Minion : RigidBody2D
 	async void OnFoodEaten(int value)
 	{
 		State = PlayerState.Eating;
-		Sprite?.Play("chomp");
+		Sprite?.Play("Chomp" + furColour);
 		await ToSignal(Sprite, "animation_finished");
 		State = PlayerState.Normal;
 	}
