@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://b71x3fh1g3fha"]
+[gd_scene load_steps=54 format=3 uid="uid://b71x3fh1g3fha"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.cs" id="1_6fxqh"]
 [ext_resource type="Texture2D" uid="uid://bd3vbmahu5psx" path="res://Assets/Sprites/Player/RatRunning/Untitled-Artwork-1.png" id="2_2ogl8"]
@@ -30,6 +30,18 @@
 [ext_resource type="Texture2D" uid="uid://cjjmnfu145mb1" path="res://Assets/Sprites/Player/Death/Death-7.png" id="15_qrhla"]
 [ext_resource type="Texture2D" uid="uid://ctp1prwtk5qes" path="res://Assets/Sprites/Player/Death/Death-8.png" id="16_6uqnu"]
 [ext_resource type="Texture2D" uid="uid://cfv4bmclnrwjb" path="res://Assets/Sprites/Player/Death/Death-9.png" id="17_wybna"]
+[ext_resource type="Texture2D" uid="uid://bcco0pkxu56ut" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--1.png" id="18_mchod"]
+[ext_resource type="Texture2D" uid="uid://px21d4geykio" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--2.png" id="19_yn01n"]
+[ext_resource type="Texture2D" uid="uid://rf5g4meusui0" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--3.png" id="20_ybrbi"]
+[ext_resource type="Texture2D" uid="uid://2cevt174htvf" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--4.png" id="21_iubs2"]
+[ext_resource type="Texture2D" uid="uid://gxa546djsq03" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--5.png" id="22_h1ovd"]
+[ext_resource type="Texture2D" uid="uid://3d1gqa87v5y3" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--6.png" id="23_duo2p"]
+[ext_resource type="Texture2D" uid="uid://14kkdcoum8c0" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--7.png" id="24_o2q4w"]
+[ext_resource type="Texture2D" uid="uid://b2h0g0tdgvr8h" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--8.png" id="25_bkcyw"]
+[ext_resource type="Texture2D" uid="uid://m0dwfwa3ycep" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--9.png" id="26_0pf3e"]
+[ext_resource type="Texture2D" uid="uid://cxfc6rllvo3rf" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--10.png" id="27_x72va"]
+[ext_resource type="Texture2D" uid="uid://cck5qeu3xck8k" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--11.png" id="28_ixp41"]
+[ext_resource type="Texture2D" uid="uid://ow33yuetui63" path="res://Assets/Sprites/Player/Electrocution/Electrocuted--12.png" id="29_mugbr"]
 [ext_resource type="PackedScene" uid="uid://dgbtj61tdfgvq" path="res://Scenes/UI/UI.tscn" id="31_gr6dr"]
 [ext_resource type="Script" path="res://Scenes/Player/ChildSpawner.cs" id="32_my6jg"]
 [ext_resource type="PackedScene" uid="uid://02ahvnhyihxo" path="res://Scenes/Minion/Minion.tscn" id="33_v5jiy"]
@@ -95,6 +107,47 @@ animations = [{
 }],
 "loop": false,
 "name": &"dead",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("18_mchod")
+}, {
+"duration": 4.0,
+"texture": ExtResource("19_yn01n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ybrbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_iubs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_h1ovd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_duo2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_o2q4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bkcyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0pf3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_x72va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ixp41")
+}, {
+"duration": 10.0,
+"texture": ExtResource("29_mugbr")
+}],
+"loop": true,
+"name": &"electrocution",
 "speed": 2.0
 }, {
 "frames": [{
@@ -193,7 +246,7 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_itegm")
-animation = &"dead"
+animation = &"electrocution"
 metadata/_edit_group_ = true
 
 [node name="StepParticles" type="GPUParticles2D" parent="Sprite"]
