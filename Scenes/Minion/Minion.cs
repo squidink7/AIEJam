@@ -112,3 +112,5 @@ public partial class Minion : RigidBody2D
 		Navigator.TargetPosition = parentPosition + new Vector2(randomX, randomY);;
 	}
 }
+
+
